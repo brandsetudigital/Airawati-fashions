@@ -26,15 +26,16 @@ export default function CartDrawer() {
         className="absolute inset-0 bg-black/50 backdrop-blur-sm transition-opacity"
       ></div>
 
-      <div className="absolute inset-y-0 right-0 max-w-full flex pl-10">
-        <div className="w-screen max-w-md bg-[#FAF6F0] shadow-2xl flex flex-col border-l border-[#C5A059]/30">
+      <div className="absolute inset-y-0 right-0 max-w-full flex pl-0 sm:pl-10">
+        <div className="w-screen sm:w-[420px] max-w-full bg-[#FAF6F0] shadow-2xl flex flex-col border-l border-[#C5A059]/30">
           
           {/**/}
-          <div className="p-5 border-b border-[#C5A059]/20 flex items-center justify-between bg-white/70">
-            <h3 className="font-serif text-xl font-bold text-[#5C1329]">Your Shopping Bag</h3>
+          <div className="p-4 sm:p-5 border-b border-[#C5A059]/20 flex items-center justify-between bg-white/70">
+            <h3 className="font-serif text-lg sm:text-xl font-bold text-[#5C1329]">Your Shopping Bag</h3>
             <button
               onClick={() => setIsCartOpen(false)}
-              className="p-1 rounded-full text-stone-500 hover:text-stone-800"
+              className="p-1.5 rounded-full text-stone-500 hover:text-stone-800"
+              aria-label="Close cart"
             >
               <X className="w-5 h-5" />
             </button>

@@ -48,7 +48,7 @@ export default function HeroSlider() {
         </div>
 
         {/* SLIDER VIEWPORT */}
-        <div className="relative overflow-hidden rounded-md min-h-[360px] sm:min-h-[440px] md:min-h-[500px] lg:min-h-[540px] bg-stone-900 shadow-md">
+        <div className="relative overflow-hidden rounded-md min-h-[420px] sm:min-h-[460px] md:min-h-[500px] lg:min-h-[540px] bg-stone-900 shadow-md">
           
           {/* SLIDE 1: GLAM UP FOR THIS ONAM (Screenshot 1) */}
           <div
@@ -60,7 +60,7 @@ export default function HeroSlider() {
               <div className="w-full h-full flex flex-col md:flex-row">
                 
                 {/* Left Side: Deep Crimson / Maroon with Decorative Lotus Motifs */}
-                <div className="relative w-full md:w-[58%] lg:w-[56%] bg-[#8B0821] text-white flex flex-col justify-center items-center text-center p-6 sm:p-10 lg:p-14 z-10 overflow-hidden">
+                <div className="relative w-full md:w-[58%] lg:w-[56%] bg-[#8B0821] text-white flex flex-col justify-center items-center text-center p-4 sm:p-10 lg:p-14 z-10 overflow-hidden flex-1 md:flex-none">
                   
                   {/* Decorative Corner Lotus Rangoli (Top-Left) */}
                   <div className="absolute top-0 left-0 w-24 h-24 sm:w-32 sm:h-32 pointer-events-none opacity-90">
@@ -127,7 +127,7 @@ export default function HeroSlider() {
                 </div>
 
                 {/* Right Side: Photo of Smiling Women Celebrating in Sarees with Petals */}
-                <div className="w-full md:w-[42%] lg:w-[44%] h-64 sm:h-80 md:h-auto relative overflow-hidden bg-stone-900">
+                <div className="w-full md:w-[42%] lg:w-[44%] h-44 sm:h-80 md:h-auto relative overflow-hidden bg-stone-900 shrink-0">
                   <img
                     src="/images/onam_women.jpg"
                     alt="Women Celebrating Onam in Airawati Sarees"
@@ -267,10 +267,10 @@ export default function HeroSlider() {
                 </div>
 
                 {/* 3 Circular Blouse Photos (Matching Figma Screenshot 3) */}
-                <div className="relative z-10 flex items-center justify-center gap-4 sm:gap-8 my-6">
+                <div className="relative z-10 flex items-center justify-center gap-2 sm:gap-6 lg:gap-8 my-3 sm:my-6">
                   
                   {/* Left Circle: Blue / Designer Blouse */}
-                  <div className="w-24 h-24 sm:w-40 sm:h-40 lg:w-48 lg:h-48 rounded-full overflow-hidden border-2 sm:border-4 border-[#C5A059]/40 shadow-md bg-stone-100 group-hover:scale-105 transition-transform duration-500">
+                  <div className="w-16 h-16 sm:w-36 sm:h-36 lg:w-48 lg:h-48 rounded-full overflow-hidden border-2 sm:border-4 border-[#C5A059]/40 shadow-md bg-stone-100 group-hover:scale-105 transition-transform duration-500 shrink-0">
                     <img
                       src="/images/designer_blouse.jpg"
                       alt="Designer Blouse"
@@ -279,7 +279,7 @@ export default function HeroSlider() {
                   </div>
 
                   {/* Center Circle (Larger): Purple Velvet Backless with Net Lattice & Pearls */}
-                  <div className="w-32 h-32 sm:w-52 sm:h-52 lg:w-60 lg:h-60 rounded-full overflow-hidden border-3 sm:border-4 border-[#C5A059] shadow-xl bg-purple-950 group-hover:scale-110 transition-transform duration-500 z-10">
+                  <div className="w-24 h-24 sm:w-48 sm:h-48 lg:w-60 lg:h-60 rounded-full overflow-hidden border-2 sm:border-4 border-[#C5A059] shadow-xl bg-purple-950 group-hover:scale-110 transition-transform duration-500 z-10 shrink-0">
                     <img
                       src="/images/blouse_purple.jpg"
                       alt="Royal Purple Velvet Backless Blouse with Pearl Latkan"
@@ -288,7 +288,7 @@ export default function HeroSlider() {
                   </div>
 
                   {/* Right Circle: Yellow Silk Collar Blouse */}
-                  <div className="w-24 h-24 sm:w-40 sm:h-40 lg:w-48 lg:h-48 rounded-full overflow-hidden border-2 sm:border-4 border-[#C5A059]/40 shadow-md bg-stone-100 group-hover:scale-105 transition-transform duration-500">
+                  <div className="w-16 h-16 sm:w-36 sm:h-36 lg:w-48 lg:h-48 rounded-full overflow-hidden border-2 sm:border-4 border-[#C5A059]/40 shadow-md bg-stone-100 group-hover:scale-105 transition-transform duration-500 shrink-0">
                     <img
                       src="/images/hero_model.jpg"
                       alt="Handcrafted Silk Blouse"

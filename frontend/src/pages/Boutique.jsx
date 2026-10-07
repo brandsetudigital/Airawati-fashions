@@ -392,11 +392,11 @@ export default function Boutique() {
               </div>
 
               {/* Add to Bag & Buy Now Direct Purchase Option */}
-              <div className="pt-2 flex flex-wrap items-center gap-3">
+              <div className="pt-2 flex flex-col sm:flex-row items-stretch sm:items-center gap-2.5 sm:gap-3">
                 <button
                   type="button"
                   onClick={() => handleAddBlouseToBag(selectedBlouse)}
-                  className="px-6 py-2.5 bg-white border border-[#5C1329] text-[#5C1329] hover:bg-[#FAF2F4] rounded-xl text-xs font-semibold tracking-wider transition-all flex items-center gap-2 cursor-pointer shadow-xs"
+                  className="w-full sm:w-auto px-6 py-2.5 bg-white border border-[#5C1329] text-[#5C1329] hover:bg-[#FAF2F4] rounded-xl text-xs font-semibold tracking-wider transition-all flex items-center justify-center gap-2 cursor-pointer shadow-xs"
                 >
                   <ShoppingBag className="w-3.5 h-3.5" />
                   <span>Add to Bag (Size {selectedSize})</span>
@@ -416,7 +416,7 @@ export default function Boutique() {
                       state: { product: customBlouseItem, qty: 1 }
                     });
                   }}
-                  className="px-6 py-2.5 bg-[#4A151B] hover:bg-[#5C1329] text-white rounded-xl text-xs font-semibold tracking-wider transition-all flex items-center gap-2 cursor-pointer shadow-xs"
+                  className="w-full sm:w-auto px-6 py-2.5 bg-[#4A151B] hover:bg-[#5C1329] text-white rounded-xl text-xs font-semibold tracking-wider transition-all flex items-center justify-center gap-2 cursor-pointer shadow-xs"
                 >
                   <span>Buy Now</span>
                   <ArrowRight className="w-3.5 h-3.5" />

@@ -46,16 +46,17 @@ export default function Navbar() {
 
   return (
     <>
-      <header className="bg-[#5C1329] text-[#FAF6F0] text-[11px] py-2 px-4 text-center tracking-widest uppercase border-b border-[#C5A059]/30">
+      <header className="bg-[#5C1329] text-[#FAF6F0] text-[9px] sm:text-[11px] py-1.5 sm:py-2 px-3 sm:px-4 text-center tracking-wider sm:tracking-widest uppercase border-b border-[#C5A059]/30 leading-tight">
         <p>Handcrafted In India &bull; Complimentary Worldwide Shipping On Orders Over &dollar;200 &bull; 100% Authentic Handloom Certified</p>
       </header>
 
       <nav className="bg-[#FAF6F0]/95 backdrop-blur-md sticky top-0 z-40 border-b border-[#C5A059]/20 transition-all">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 py-3.5 flex items-center justify-between">
+        <div className="max-w-7xl mx-auto px-3 sm:px-6 py-2.5 sm:py-3.5 flex items-center justify-between">
           
           <button
             onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-            className="lg:hidden p-2 text-[#5C1329] hover:text-[#C5A059] transition-colors"
+            className="lg:hidden p-1.5 text-[#5C1329] hover:text-[#C5A059] transition-colors"
+            aria-label="Toggle Navigation Menu"
           >
             {mobileMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
           </button>
@@ -64,7 +65,7 @@ export default function Navbar() {
             <img 
               src="/images/airawati_logo.png" 
               alt="Airawati" 
-              className="h-11 sm:h-12 md:h-14 w-auto object-contain transition-transform group-hover:scale-105" 
+              className="h-10 sm:h-12 md:h-14 w-auto object-contain transition-transform group-hover:scale-105" 
             />
           </Link>
 
@@ -87,7 +88,7 @@ export default function Navbar() {
             })}
           </div>
 
-          <div className="flex items-center space-x-3 sm:space-x-5">
+          <div className="flex items-center space-x-2.5 sm:space-x-5">
             <button
               onClick={() => {
                 const q = prompt("Search Airawati collection (e.g. Maheshwari, Banarasi, Chanderi):");
@@ -210,25 +211,97 @@ export default function Navbar() {
           </div>
         </div>
 
+        {/* MOBILE NAVIGATION DRAWER */}
         {mobileMenuOpen && (
-          <div className="lg:hidden bg-[#FAF6F0] border-t border-[#C5A059]/20 px-6 py-5 space-y-4 shadow-lg animate-fadeIn">
-            {navLinks.map((link) => (
-              <Link
-                key={link.name}
-                to={link.path}
-                onClick={() => setMobileMenuOpen(false)}
-                className="block text-sm font-semibold tracking-wider text-stone-800 hover:text-[#5C1329] py-1"
-              >
-                {link.name}
-              </Link>
-            ))}
-            <div className="pt-3 border-t border-stone-200 flex flex-wrap gap-3">
+          <div className="lg:hidden bg-[#FAF6F0] border-t border-[#C5A059]/20 px-4 sm:px-6 py-5 space-y-4 shadow-xl animate-fadeIn max-h-[85vh] overflow-y-auto">
+            {/* User status card on mobile */}
+            {isLoggedIn ? (
+              <div className="p-3.5 bg-white rounded-xl border border-[#C5A059]/25 flex items-center justify-between shadow-2xs">
+                <div className="flex items-center gap-2.5">
+                  <div className="w-9 h-9 rounded-full bg-[#5C1329] text-white flex items-center justify-center font-bold text-xs">
+                    {currentUser?.name?.charAt(0) || 'A'}
+                  </div>
+                  <div>
+                    <p className="text-xs font-bold text-[#4A151B]">{currentUser?.name || 'Customer'}</p>
+                    <p className="text-[10px] text-stone-500">{currentUser?.email || ''}</p>
+                  </div>
+                </div>
+                <Link
+                  to="/account"
+                  onClick={() => setMobileMenuOpen(false)}
+                  className="px-3 py-1.5 bg-[#5C1329] text-white rounded-lg text-[11px] font-semibold"
+                >
+                  Dashboard
+                </Link>
+              </div>
+            ) : null}
+
+            {/* Quick Departments Pills */}
+            <div className="pt-1">
+              <span className="text-[10px] uppercase font-bold tracking-widest text-[#A87B28] block mb-2">Departments</span>
+              <div className="grid grid-cols-2 gap-2">
+                <Link
+                  to="/shop"
+                  onClick={() => setMobileMenuOpen(false)}
+                  className="p-2.5 bg-white rounded-xl border border-[#F0D5DA] text-stone-800 hover:border-[#5C1329] flex items-center gap-2 text-xs font-semibold"
+                >
+                  <span>🥻</span>
+                  <span>Pure Sarees</span>
+                </Link>
+                <Link
+                  to="/boutique"
+                  onClick={() => setMobileMenuOpen(false)}
+                  className="p-2.5 bg-white rounded-xl border border-[#F0D5DA] text-stone-800 hover:border-[#5C1329] flex items-center gap-2 text-xs font-semibold"
+                >
+                  <span>✂️</span>
+                  <span>Boutique Blouse</span>
+                </Link>
+                <Link
+                  to="/accessories"
+                  onClick={() => setMobileMenuOpen(false)}
+                  className="p-2.5 bg-white rounded-xl border border-[#F0D5DA] text-stone-800 hover:border-[#5C1329] flex items-center gap-2 text-xs font-semibold"
+                >
+                  <span>💎</span>
+                  <span>Jewellery</span>
+                </Link>
+                <Link
+                  to="/account?tab=orders"
+                  onClick={() => setMobileMenuOpen(false)}
+                  className="p-2.5 bg-white rounded-xl border border-[#F0D5DA] text-stone-800 hover:border-[#5C1329] flex items-center gap-2 text-xs font-semibold"
+                >
+                  <span>📦</span>
+                  <span>Track Orders</span>
+                </Link>
+              </div>
+            </div>
+
+            {/* Standard Nav Links */}
+            <div className="pt-2 border-t border-stone-200/80 space-y-1">
+              <span className="text-[10px] uppercase font-bold tracking-widest text-stone-500 block mb-1">Navigation</span>
+              {navLinks.map((link) => (
+                <Link
+                  key={link.name}
+                  to={link.path}
+                  onClick={() => setMobileMenuOpen(false)}
+                  className={`block text-xs sm:text-sm font-semibold tracking-wider py-2 px-2.5 rounded-lg transition-colors ${
+                    location.pathname === link.path
+                      ? 'bg-[#5C1329]/10 text-[#5C1329] font-bold'
+                      : 'text-stone-800 hover:text-[#5C1329]'
+                  }`}
+                >
+                  {link.name}
+                </Link>
+              ))}
+            </div>
+
+            {/* Account Actions */}
+            <div className="pt-3 border-t border-stone-200 flex flex-wrap gap-2.5">
               {isLoggedIn ? (
                 <>
                   <Link
                     to="/account"
                     onClick={() => setMobileMenuOpen(false)}
-                    className="px-4 py-2 bg-[#5C1329] text-white rounded-full text-xs font-semibold"
+                    className="flex-1 text-center py-2.5 bg-[#5C1329] text-white rounded-xl text-xs font-semibold"
                   >
                     My Account
                   </Link>
@@ -237,7 +310,7 @@ export default function Navbar() {
                       setMobileMenuOpen(false);
                       handleLogout();
                     }}
-                    className="px-4 py-2 border border-red-600 text-red-600 rounded-full text-xs font-semibold hover:bg-red-50"
+                    className="px-4 py-2.5 border border-red-500 text-red-600 rounded-xl text-xs font-semibold hover:bg-red-50"
                   >
                     Logout
                   </button>
@@ -247,14 +320,14 @@ export default function Navbar() {
                   <Link
                     to="/signin"
                     onClick={() => setMobileMenuOpen(false)}
-                    className="px-4 py-2 bg-[#5C1329] text-white rounded-full text-xs font-semibold"
+                    className="flex-1 text-center py-2.5 bg-[#5C1329] text-white rounded-xl text-xs font-semibold"
                   >
                     Sign In
                   </Link>
                   <Link
                     to="/signup"
                     onClick={() => setMobileMenuOpen(false)}
-                    className="px-4 py-2 border border-[#5C1329] text-[#5C1329] rounded-full text-xs font-semibold"
+                    className="flex-1 text-center py-2.5 border border-[#5C1329] text-[#5C1329] rounded-xl text-xs font-semibold hover:bg-white"
                   >
                     Sign Up
                   </Link>

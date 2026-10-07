@@ -397,13 +397,34 @@ export default function Checkout() {
         </div>
 
         {/* PAGE HEADER: "Complete Your Purchase" */}
-        <div className="text-center mb-8">
-          <h1 className="font-serif text-3xl sm:text-4xl font-bold text-[#4A151B]">
+        <div className="text-center mb-6 sm:mb-8">
+          <h1 className="font-serif text-2xl sm:text-4xl font-bold text-[#4A151B]">
             Complete Your Purchase
           </h1>
-          <p className="text-sm font-semibold text-stone-700 mt-2">
+          <p className="text-xs sm:text-sm font-semibold text-stone-700 mt-1.5 sm:mt-2">
             Please provide your shipping details and payment information to finalize your order.
           </p>
+        </div>
+
+        {/* MOBILE ORDER SUMMARY PREVIEW STRIP (Visible only on mobile screens <768px) */}
+        <div className="md:hidden mb-6 bg-white rounded-xl p-3.5 border border-[#F0D5DA] shadow-xs">
+          <div className="flex items-center justify-between gap-3">
+            <div className="flex items-center gap-2.5 min-w-0">
+              <img
+                src={primaryProduct?.image || '/images/hero_model.jpg'}
+                alt={primaryProduct?.title}
+                className="w-12 h-14 object-cover rounded-md border border-stone-200 shrink-0"
+              />
+              <div className="min-w-0">
+                <p className="text-xs font-bold text-[#4A151B] truncate">{primaryProduct?.shortTitle || primaryProduct?.title}</p>
+                <p className="text-[10px] text-stone-500">{checkoutItems.length} {checkoutItems.length > 1 ? 'items' : 'item'} &bull; Free Shipping</p>
+              </div>
+            </div>
+            <div className="text-right shrink-0">
+              <span className="text-[10px] text-stone-500 block">Total</span>
+              <span className="text-sm font-bold text-[#4A151B]">₹{total.toLocaleString()}</span>
+            </div>
+          </div>
         </div>
 
         {/* 2-CARD GRID LAYOUT (Matching Screenshot 3) */}

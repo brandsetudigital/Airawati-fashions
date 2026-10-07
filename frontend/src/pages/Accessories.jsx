@@ -127,11 +127,11 @@ export default function Accessories() {
         <img 
           src="/images/shop_hero_mandala_left_clean.png" 
           alt="Golden Mandala" 
-          className="absolute left-0 top-0 h-full w-auto max-w-[45%] md:max-w-[40%] lg:max-w-[34%] object-contain object-left pointer-events-none select-none z-0" 
+          className="absolute left-0 top-0 h-full w-auto max-w-[28%] sm:max-w-[40%] lg:max-w-[34%] object-contain object-left pointer-events-none select-none z-0 opacity-80 sm:opacity-100" 
         />
 
         <div className="relative z-10 flex flex-col items-center justify-center text-center px-4 max-w-xl mx-auto">
-          <h1 className="font-serif text-4xl sm:text-6xl md:text-7xl font-bold tracking-tight text-center">
+          <h1 className="font-serif text-3xl sm:text-6xl md:text-7xl font-bold tracking-tight text-center">
             <span className="text-[#5C1329]">Modern&amp;</span>
             <span className="text-[#B83227] ml-0.5 sm:ml-1">Confident</span>
           </h1>
@@ -159,12 +159,12 @@ export default function Accessories() {
         </div>
 
         {/* Category Pills Filter */}
-        <div className="flex items-center justify-center gap-2 overflow-x-auto pb-4 pt-2">
+        <div className="flex items-center justify-start sm:justify-center gap-2 overflow-x-auto pb-3 pt-2 no-scrollbar px-1">
           {categories.map((c) => (
             <button
               key={c}
               onClick={() => setSelectedCategory(c)}
-              className={`px-4 py-2 rounded-full text-xs font-semibold whitespace-nowrap transition-all cursor-pointer ${
+              className={`px-3.5 sm:px-4 py-1.5 sm:py-2 rounded-full text-xs font-semibold whitespace-nowrap transition-all cursor-pointer ${
                 selectedCategory === c
                   ? 'bg-[#5C1329] text-white shadow-sm'
                   : 'bg-white border border-stone-200 text-stone-700 hover:border-[#5C1329]'
@@ -202,11 +202,11 @@ export default function Accessories() {
               </div>
 
               {/* Actions */}
-              <div className="flex flex-wrap gap-3 pt-2">
+              <div className="flex flex-col sm:flex-row items-stretch sm:items-center gap-2.5 sm:gap-3 pt-2">
                 <button
                   type="button"
                   onClick={() => addToCart(selectedAcc, qty)}
-                  className="px-6 py-2.5 bg-[#4A151B] hover:bg-[#5C1329] text-white rounded-xl text-xs font-semibold tracking-wider transition-colors shadow-sm cursor-pointer flex items-center gap-2"
+                  className="w-full sm:w-auto px-6 py-2.5 bg-[#4A151B] hover:bg-[#5C1329] text-white rounded-xl text-xs font-semibold tracking-wider transition-colors shadow-sm cursor-pointer flex items-center justify-center gap-2"
                 >
                   <ShoppingBag className="w-4 h-4" />
                   <span>Add to Bag</span>
@@ -214,14 +214,14 @@ export default function Accessories() {
                 <button
                   type="button"
                   onClick={() => handleAddAndCheckout(selectedAcc, qty)}
-                  className="px-6 py-2.5 border border-[#4A151B] text-[#4A151B] hover:bg-[#FAF6F0] rounded-xl text-xs font-semibold tracking-wider transition-colors cursor-pointer"
+                  className="w-full sm:w-auto px-6 py-2.5 border border-[#4A151B] text-[#4A151B] hover:bg-[#FAF6F0] rounded-xl text-xs font-semibold tracking-wider transition-colors cursor-pointer text-center"
                 >
                   Buy Now
                 </button>
                 <button
                   type="button"
                   onClick={() => toggleWishlist(selectedAcc)}
-                  className={`p-2.5 border rounded-xl transition-all cursor-pointer ${
+                  className={`p-2.5 border rounded-xl transition-all cursor-pointer flex items-center justify-center ${
                     isInWishlist(selectedAcc.id)
                       ? 'border-[#B83227] text-[#B83227] bg-rose-50'
                       : 'border-stone-200 text-stone-600 hover:border-[#5C1329]'

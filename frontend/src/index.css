@@ -53,3 +53,18 @@ h1, h2, h3, h4, .font-serif {
 ::-webkit-scrollbar-thumb:hover {
   background: #5C1329;
 }
+
+/* Hide scrollbar for clean horizontal mobile tabs & pill strips */
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+.no-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+/* Fast tap response on touch devices */
+button, a, input, select {
+  touch-action: manipulation;
+}
+

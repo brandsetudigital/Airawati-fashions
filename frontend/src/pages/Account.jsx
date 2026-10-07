@@ -403,56 +403,89 @@ export default function Account() {
           {/* ======================================================== */}
           {/* LEFT SIDEBAR PROFILE CARD */}
           {/* ======================================================== */}
-          <div className="md:col-span-4 lg:col-span-3 bg-[#F9ECE8] rounded-2xl p-6 sm:p-7 text-center shadow-sm border border-stone-200/40">
+          <div className="md:col-span-4 lg:col-span-3 bg-[#F9ECE8] rounded-2xl p-4 sm:p-7 shadow-sm border border-stone-200/40">
             
-            {/* User Avatar (Rounded rectangular matching screenshots) */}
-            <div className="w-28 h-36 mx-auto rounded-xl overflow-hidden shadow-md mb-3 bg-stone-200">
-              <img
-                src={userProfile.avatar || '/images/hero_model.jpg'}
-                alt={userProfile.name}
-                className="w-full h-full object-cover"
-              />
+            {/* Desktop Full Profile Card */}
+            <div className="hidden md:block text-center">
+              <div className="w-28 h-36 mx-auto rounded-xl overflow-hidden shadow-md mb-3 bg-stone-200">
+                <img
+                  src={userProfile.avatar || '/images/hero_model.jpg'}
+                  alt={userProfile.name}
+                  className="w-full h-full object-cover"
+                />
+              </div>
+
+              {/* User Name */}
+              <h2 className="font-serif font-bold text-base text-[#4A151B]">
+                {userProfile.name || 'Customer'}
+              </h2>
+
+              {/* Contact Details */}
+              <div className="text-xs text-stone-700 space-y-1 mt-2">
+                <p className="flex items-center justify-center gap-1.5 font-medium">
+                  <Phone className="w-3 h-3 text-[#6B1E28]" />
+                  <span>{userProfile.phone || 'No phone added'}</span>
+                </p>
+                <p className="flex items-center justify-center gap-1.5 font-medium">
+                  <Mail className="w-3 h-3 text-[#6B1E28]" />
+                  <span className="truncate max-w-[180px]">{userProfile.email || 'customer@airawati.com'}</span>
+                </p>
+              </div>
+
+              {/* Edit Profile Button */}
+              <button
+                type="button"
+                onClick={() => switchTab('profile')}
+                className="bg-[#6B1E28] hover:bg-[#52131C] text-white text-xs font-semibold px-6 py-2 rounded-full my-4 shadow-sm transition-colors cursor-pointer"
+              >
+                Edit Profile
+              </button>
             </div>
 
-            {/* User Name */}
-            <h2 className="font-serif font-bold text-base text-[#4A151B]">
-              {userProfile.name || 'Customer'}
-            </h2>
-
-            {/* Contact Details */}
-            <div className="text-xs text-stone-700 space-y-1 mt-2">
-              <p className="flex items-center justify-center gap-1.5 font-medium">
-                <Phone className="w-3 h-3 text-[#6B1E28]" />
-                <span>{userProfile.phone || 'No phone added'}</span>
-              </p>
-              <p className="flex items-center justify-center gap-1.5 font-medium">
-                <Mail className="w-3 h-3 text-[#6B1E28]" />
-                <span className="truncate max-w-[180px]">{userProfile.email || 'customer@airawati.com'}</span>
-              </p>
+            {/* Mobile Compact Profile Strip */}
+            <div className="md:hidden flex items-center justify-between gap-3 pb-3 border-b border-stone-200/60 mb-2.5">
+              <div className="flex items-center gap-2.5 min-w-0">
+                <div className="w-11 h-13 rounded-lg overflow-hidden bg-stone-200 shrink-0 border border-[#6B1E28]/20 shadow-xs">
+                  <img
+                    src={userProfile.avatar || '/images/hero_model.jpg'}
+                    alt={userProfile.name}
+                    className="w-full h-full object-cover"
+                  />
+                </div>
+                <div className="min-w-0">
+                  <h2 className="font-serif font-bold text-sm text-[#4A151B] truncate">
+                    {userProfile.name || 'Customer'}
+                  </h2>
+                  <p className="text-[10px] text-stone-600 truncate">
+                    {userProfile.email || 'customer@airawati.com'}
+                  </p>
+                  <p className="text-[10px] text-stone-500">
+                    {userProfile.phone || ''}
+                  </p>
+                </div>
+              </div>
+              <button
+                type="button"
+                onClick={() => switchTab('profile')}
+                className="bg-[#6B1E28] text-white text-[11px] font-semibold px-3 py-1.5 rounded-full shadow-xs shrink-0 cursor-pointer"
+              >
+                Edit
+              </button>
             </div>
 
-            {/* Edit Profile Button */}
-            <button
-              type="button"
-              onClick={() => switchTab('profile')}
-              className="bg-[#6B1E28] hover:bg-[#52131C] text-white text-xs font-semibold px-6 py-2 rounded-full my-4 shadow-sm transition-colors cursor-pointer"
-            >
-              Edit Profile
-            </button>
-
-            {/* Sidebar Navigation Tabs (Vertical List) */}
-            <div className="space-y-1 pt-2 text-left">
+            {/* Sidebar Navigation Tabs (Horizontal scrolling strip on mobile, Vertical list on desktop) */}
+            <div className="flex md:flex-col overflow-x-auto no-scrollbar gap-1.5 md:space-y-1 md:gap-0 pt-1 text-left">
               {/* 1. My Orders */}
               <button
                 type="button"
                 onClick={() => switchTab('orders')}
-                className={`w-full flex items-center gap-3 px-4 py-2.5 rounded-full text-xs font-semibold transition-all cursor-pointer ${
+                className={`whitespace-nowrap flex items-center gap-2 md:gap-3 px-3.5 py-2 md:py-2.5 rounded-full text-xs font-semibold transition-all cursor-pointer shrink-0 ${
                   activeTab === 'orders'
                     ? 'bg-[#6B1E28] text-white shadow-sm'
-                    : 'text-stone-700 hover:text-[#6B1E28] hover:bg-white/50'
+                    : 'text-stone-700 hover:text-[#6B1E28] hover:bg-white/50 bg-white/40 md:bg-transparent'
                 }`}
               >
-                <FileText className="w-4 h-4" />
+                <FileText className="w-3.5 h-3.5 md:w-4 md:h-4" />
                 <span>My Orders</span>
               </button>
 
@@ -460,13 +493,13 @@ export default function Account() {
               <button
                 type="button"
                 onClick={() => switchTab('addresses')}
-                className={`w-full flex items-center gap-3 px-4 py-2.5 rounded-full text-xs font-semibold transition-all cursor-pointer ${
+                className={`whitespace-nowrap flex items-center gap-2 md:gap-3 px-3.5 py-2 md:py-2.5 rounded-full text-xs font-semibold transition-all cursor-pointer shrink-0 ${
                   activeTab === 'addresses'
                     ? 'bg-[#6B1E28] text-white shadow-sm'
-                    : 'text-stone-700 hover:text-[#6B1E28] hover:bg-white/50'
+                    : 'text-stone-700 hover:text-[#6B1E28] hover:bg-white/50 bg-white/40 md:bg-transparent'
                 }`}
               >
-                <Clock className="w-4 h-4" />
+                <Clock className="w-3.5 h-3.5 md:w-4 md:h-4" />
                 <span>Saved Addresses</span>
               </button>
 
@@ -474,13 +507,13 @@ export default function Account() {
               <button
                 type="button"
                 onClick={() => switchTab('wishlist')}
-                className={`w-full flex items-center gap-3 px-4 py-2.5 rounded-full text-xs font-semibold transition-all cursor-pointer ${
+                className={`whitespace-nowrap flex items-center gap-2 md:gap-3 px-3.5 py-2 md:py-2.5 rounded-full text-xs font-semibold transition-all cursor-pointer shrink-0 ${
                   activeTab === 'wishlist'
                     ? 'bg-[#6B1E28] text-white shadow-sm'
-                    : 'text-stone-700 hover:text-[#6B1E28] hover:bg-white/50'
+                    : 'text-stone-700 hover:text-[#6B1E28] hover:bg-white/50 bg-white/40 md:bg-transparent'
                 }`}
               >
-                <Heart className="w-4 h-4" />
+                <Heart className="w-3.5 h-3.5 md:w-4 md:h-4" />
                 <span>Wishlist</span>
               </button>
 
@@ -488,13 +521,13 @@ export default function Account() {
               <button
                 type="button"
                 onClick={() => switchTab('profile')}
-                className={`w-full flex items-center gap-3 px-4 py-2.5 rounded-full text-xs font-semibold transition-all cursor-pointer ${
+                className={`whitespace-nowrap flex items-center gap-2 md:gap-3 px-3.5 py-2 md:py-2.5 rounded-full text-xs font-semibold transition-all cursor-pointer shrink-0 ${
                   activeTab === 'profile'
                     ? 'bg-[#6B1E28] text-white shadow-sm'
-                    : 'text-stone-700 hover:text-[#6B1E28] hover:bg-white/50'
+                    : 'text-stone-700 hover:text-[#6B1E28] hover:bg-white/50 bg-white/40 md:bg-transparent'
                 }`}
               >
-                <User className="w-4 h-4" />
+                <User className="w-3.5 h-3.5 md:w-4 md:h-4" />
                 <span>Account Details</span>
               </button>
 
@@ -502,13 +535,13 @@ export default function Account() {
               <button
                 type="button"
                 onClick={() => switchTab('logout')}
-                className={`w-full flex items-center gap-3 px-4 py-2.5 rounded-full text-xs font-semibold transition-all cursor-pointer ${
+                className={`whitespace-nowrap flex items-center gap-2 md:gap-3 px-3.5 py-2 md:py-2.5 rounded-full text-xs font-semibold transition-all cursor-pointer shrink-0 ${
                   activeTab === 'logout'
                     ? 'bg-[#6B1E28] text-white shadow-sm'
-                    : 'text-stone-700 hover:text-red-700 hover:bg-white/50'
+                    : 'text-stone-700 hover:text-red-700 hover:bg-white/50 bg-white/40 md:bg-transparent'
                 }`}
               >
-                <LogOut className="w-4 h-4" />
+                <LogOut className="w-3.5 h-3.5 md:w-4 md:h-4" />
                 <span>Logout</span>
               </button>
             </div>

@@ -208,7 +208,7 @@ export default function Home() {
           <p className="text-stone-500 text-xs sm:text-sm mt-2">Blending tradition with modern elegance</p>
         </div>
 
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
+        <div className="grid grid-cols-2 md:grid-cols-4 gap-3 sm:gap-6">
           {featuredSarees.map((saree) => (
             <SareeCard key={saree.id} product={saree} />
           ))}

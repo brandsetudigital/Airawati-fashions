@@ -147,7 +147,7 @@ export default function ProductDetail() {
             </div>
 
             {/* THUMBNAILS ROW (Active one has burgundy border border-2 border-[#6E1C24]) */}
-            <div className="flex items-center gap-2.5 sm:gap-3 overflow-x-auto pb-1">
+            <div className="flex items-center gap-2.5 sm:gap-3 overflow-x-auto pb-1 no-scrollbar">
               {displayThumbnails.map((thumb, idx) => (
                 <button
                   key={idx}
@@ -222,48 +222,53 @@ export default function ProductDetail() {
               Purity
             </div>
 
-            {/* Quantity Selector + Add To Cart + Buy Now Buttons (In one horizontal row) */}
-            <div className="flex flex-wrap items-center gap-3.5 pt-1">
-              {/* Pinkish Quantity Selector */}
-              <div className="inline-flex items-center border border-[#F3C0C0] bg-[#FFEBEB] rounded overflow-hidden">
-                <button
-                  type="button"
-                  onClick={() => setQty(Math.max(1, qty - 1))}
-                  className="px-3.5 py-2 text-stone-900 hover:text-[#6E1C24] font-bold text-base"
-                  aria-label="Decrease quantity"
-                >
-                  -
-                </button>
-                <span className="px-4 text-sm font-bold text-stone-900">
-                  {qty}
-                </span>
-                <button
-                  type="button"
-                  onClick={() => setQty(qty + 1)}
-                  className="px-3.5 py-2 text-stone-900 hover:text-[#6E1C24] font-bold text-base"
-                  aria-label="Increase quantity"
-                >
-                  +
-                </button>
+            {/* Quantity Selector + Add To Cart + Buy Now Buttons (Responsive layout) */}
+            <div className="flex flex-col sm:flex-row sm:items-center gap-3 pt-1">
+              <div className="flex items-center gap-3">
+                {/* Pinkish Quantity Selector */}
+                <div className="inline-flex items-center border border-[#F3C0C0] bg-[#FFEBEB] rounded overflow-hidden">
+                  <button
+                    type="button"
+                    onClick={() => setQty(Math.max(1, qty - 1))}
+                    className="px-3.5 py-2 text-stone-900 hover:text-[#6E1C24] font-bold text-base cursor-pointer"
+                    aria-label="Decrease quantity"
+                  >
+                    -
+                  </button>
+                  <span className="px-4 text-sm font-bold text-stone-900 min-w-[28px] text-center">
+                    {qty}
+                  </span>
+                  <button
+                    type="button"
+                    onClick={() => setQty(qty + 1)}
+                    className="px-3.5 py-2 text-stone-900 hover:text-[#6E1C24] font-bold text-base cursor-pointer"
+                    aria-label="Increase quantity"
+                  >
+                    +
+                  </button>
+                </div>
               </div>
 
-              {/* Add To Cart Button */}
-              <button
-                type="button"
-                onClick={handleAddToCart}
-                className="bg-[#4A151B] hover:bg-[#380E13] text-white px-6 sm:px-7 py-2.5 rounded-full text-sm font-bold shadow transition-colors"
-              >
-                Add To Cart
-              </button>
+              {/* Action Buttons: Equal grid on mobile, flexible on desktop */}
+              <div className="grid grid-cols-2 sm:flex sm:items-center gap-2.5 sm:gap-3 flex-1">
+                {/* Add To Cart Button */}
+                <button
+                  type="button"
+                  onClick={handleAddToCart}
+                  className="w-full sm:w-auto bg-[#4A151B] hover:bg-[#380E13] text-white px-4 sm:px-7 py-2.5 rounded-full text-xs sm:text-sm font-bold shadow transition-colors text-center cursor-pointer"
+                >
+                  Add To Cart
+                </button>
 
-              {/* Buy Now Button (Proceeds to Step 2: Checkout with this exact product) */}
-              <button
-                type="button"
-                onClick={handleBuyNow}
-                className="bg-[#4A151B] hover:bg-[#380E13] text-white px-7 sm:px-8 py-2.5 rounded-full text-sm font-bold shadow transition-colors"
-              >
-                Buy Now
-              </button>
+                {/* Buy Now Button */}
+                <button
+                  type="button"
+                  onClick={handleBuyNow}
+                  className="w-full sm:w-auto bg-[#4A151B] hover:bg-[#380E13] text-white px-4 sm:px-8 py-2.5 rounded-full text-xs sm:text-sm font-bold shadow transition-colors text-center cursor-pointer"
+                >
+                  Buy Now
+                </button>
+              </div>
             </div>
 
             {/* Divider Line */}

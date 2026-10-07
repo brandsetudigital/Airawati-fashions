@@ -177,14 +177,14 @@ export default function Shop() {
             <img 
               src="/images/shop_hero_mandala_left_clean.png" 
               alt="" 
-              className="absolute left-0 top-0 h-full w-auto max-w-[32%] sm:max-w-[28%] md:max-w-[26%] object-contain object-left pointer-events-none select-none z-0" 
+              className="absolute left-0 top-0 h-full w-auto max-w-[22%] sm:max-w-[28%] md:max-w-[26%] object-contain object-left pointer-events-none select-none z-0 opacity-80 sm:opacity-100" 
             />
 
             {/* Right Mandala - Pinned to right edge, touches top and bottom of banner */}
             <img 
               src="/images/shop_hero_mandala_right_clean.png" 
               alt="" 
-              className="absolute right-0 top-0 h-full w-auto max-w-[32%] sm:max-w-[28%] md:max-w-[26%] object-contain object-right pointer-events-none select-none z-0" 
+              className="absolute right-0 top-0 h-full w-auto max-w-[22%] sm:max-w-[28%] md:max-w-[26%] object-contain object-right pointer-events-none select-none z-0 opacity-80 sm:opacity-100" 
             />
 
             {/* Center Content */}
@@ -199,10 +199,10 @@ export default function Shop() {
 
               {/* Heading: Handwoven (Line 1), Elegance (Line 2) */}
               <h1 className="font-serif tracking-tight leading-[0.92] text-center">
-                <span className="block text-4xl sm:text-6xl md:text-7xl font-bold text-[#6E2017]">
+                <span className="block text-3xl sm:text-6xl md:text-7xl font-bold text-[#6E2017]">
                   Handwoven
                 </span>
-                <span className="block text-4xl sm:text-6xl md:text-7xl font-bold text-[#B04643] mt-1 sm:mt-1.5">
+                <span className="block text-3xl sm:text-6xl md:text-7xl font-bold text-[#B04643] mt-1 sm:mt-1.5">
                   Elegance
                 </span>
               </h1>
@@ -384,7 +384,7 @@ export default function Shop() {
           </div>
 
           {/* Products Grid */}
-          <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-4 sm:gap-6 mt-8">
+          <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-3 sm:gap-6 mt-6 sm:mt-8">
             {filteredProducts.slice(0, displayCount).map((product) => (
               <SareeCard key={product.id} product={product} />
             ))}
