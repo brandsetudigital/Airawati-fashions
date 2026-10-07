@@ -1,0 +1,15 @@
+<svg width="140" height="24" viewBox="0 0 140 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- Left line with subtle taper -->
+  <line x1="15" y1="12" x2="56" y2="12" stroke="#C5A059" stroke-width="1.2" stroke-linecap="round" stroke-opacity="0.8" />
+  <circle cx="15" cy="12" r="0.8" fill="#C5A059" />
+
+  <!-- Center 4-pointed sparkle -->
+  <path d="M70 2 C70 7.5 74.5 12 80 12 C74.5 12 70 16.5 70 22 C70 16.5 65.5 12 60 12 C65.5 12 70 7.5 70 2 Z" fill="#C5A059" />
+  <!-- Center hollow diamond accent -->
+  <polygon points="70,8.5 73.5,12 70,15.5 66.5,12" fill="#FFF8F0" />
+  <circle cx="70" cy="12" r="1" fill="#C5A059" />
+
+  <!-- Right line with subtle taper -->
+  <line x1="84" y1="12" x2="125" y2="12" stroke="#C5A059" stroke-width="1.2" stroke-linecap="round" stroke-opacity="0.8" />
+  <circle cx="125" cy="12" r="0.8" fill="#C5A059" />
+</svg>

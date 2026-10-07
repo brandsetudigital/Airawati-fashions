@@ -1,0 +1,55 @@
+@import "tailwindcss/base";
+@import "tailwindcss/components";
+@import "tailwindcss/utilities";
+
+:root {
+  --color-primary: #5C1329;
+  --color-primary-dark: #430D1E;
+  --color-gold: #C5A059;
+  --color-gold-dark: #A37F38;
+  --color-gold-light: #DFBF7A;
+  --color-bg-cream: #FAF6F0;
+  --color-text-main: #1E060D;
+}
+
+body {
+  background-color: #FAF6F0;
+  color: #1E060D;
+  font-family: 'Montserrat', sans-serif;
+  overflow-x: hidden;
+}
+
+h1, h2, h3, h4, .font-serif {
+  font-family: 'Cormorant Garamond', Georgia, serif;
+}
+
+/* Mandala Watermark Background */
+.mandala-bg {
+  background-image: radial-gradient(#C5A059 1px, transparent 1px);
+  background-size: 20px 20px;
+}
+
+/* Luxury Card Hover Animations */
+.card-hover {
+  transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+}
+.card-hover:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 16px 36px -12px rgba(92, 19, 41, 0.18);
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-track {
+  background: #FAF6F0;
+}
+::-webkit-scrollbar-thumb {
+  background: #C5A059;
+  border-radius: 9999px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #5C1329;
+}
