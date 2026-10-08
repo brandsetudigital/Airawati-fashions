@@ -1,7 +1,7 @@
 // frontend/src/services/api.js
 // Universal API Client connecting React Frontend to Express + MongoDB Backend
-
-const API_BASE_URL = '/api';
+const rawApiUrl = (typeof import.meta !== 'undefined' && import.meta.env && import.meta.env.VITE_API_URL) || '/api';
+const API_BASE_URL = rawApiUrl.endsWith('/') ? rawApiUrl.slice(0, -1) : rawApiUrl;
 
 const getAuthHeaders = (endpoint = '', options = {}) => {
   const method = (options.method || 'GET').toUpperCase();
