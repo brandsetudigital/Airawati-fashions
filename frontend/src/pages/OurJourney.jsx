@@ -8,7 +8,7 @@ export default function OurJourney() {
       num: '1',
       title: 'Traditional Weaving',
       desc: 'Master artisans hand-weave each piece using time-honored techniques passed down through generations',
-      image: '/images/journey_process_spinning.jpg',
+      image: '/handloom-4.png',
       icon: (
         <svg className="w-5 h-5 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="2">
           <path strokeLinecap="round" strokeLinejoin="round" d="M14.121 14.121L19 19m-7-7l7-7m-7 7l-2.879 2.879M12 12L9.121 9.121m0 5.758a3 3 0 10-4.243 4.243 3 3 0 004.243-4.243zm0-5.758a3 3 0 10-4.243-4.243 3 3 0 004.243 4.243z" />
@@ -19,7 +19,7 @@ export default function OurJourney() {
       num: '2',
       title: 'Design & Creation',
       desc: 'Shipped with care directly from our artisan partners to your doorstep',
-      image: '/images/journey_process_weaving.jpg',
+      image: '/handloom-5.png',
       icon: (
         <svg className="w-5 h-5 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="2">
           <path strokeLinecap="round" strokeLinejoin="round" d="M7 21a4 4 0 01-4-4 5 5 0 015-5c.966 0 1.87.278 2.636.758L16 4.364a2 2 0 112.828 2.828l-8.394 5.364A5 5 0 0111 17a4 4 0 01-4 4z" />
@@ -31,7 +31,7 @@ export default function OurJourney() {
       num: '3',
       title: 'Quality Assurance',
       desc: 'Every saree undergoes rigorous quality checks and professional Airawati photoshoots',
-      image: '/images/journey_process_yarn_bundles.jpg',
+      image: '/handloom-6.png',
       icon: (
         <svg className="w-5 h-5 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="2">
           <path strokeLinecap="round" strokeLinejoin="round" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
@@ -43,7 +43,7 @@ export default function OurJourney() {
       num: '4',
       title: 'Direct Delivery',
       desc: 'Shipped with care directly from our artisan partners to your doorstep',
-      image: '/images/journey_process_delivery_yarn.jpg',
+      image: '/handloom-7.png',
       icon: (
         <svg className="w-5 h-5 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="2">
           <path strokeLinecap="round" strokeLinejoin="round" d="M9 17a2 2 0 11-4 0 2 2 0 014 0zM19 17a2 2 0 11-4 0 2 2 0 014 0z" />
@@ -53,69 +53,201 @@ export default function OurJourney() {
     }
   ];
 
-  const visionCards = [
-    {
-      title: 'Global Recognition',
-      desc: 'Taking authentic Indian handloom to the world stage while preserving its traditional essence',
-      badgeBg: 'bg-gradient-to-br from-[#4F46E5] to-[#7C3AED]',
-      lineColor: 'bg-gradient-to-r from-[#4F46E5] to-[#7C3AED]',
-      icon: (
-        <svg className="w-6 h-6 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="2">
-          <path strokeLinecap="round" strokeLinejoin="round" d="M21 12a9 9 0 01-9 9m9-9a9 9 0 00-9-9m9 9H3m9 9a9 9 0 01-9-9m9 9c1.657 0 3-4.03 3-9s-1.343-9-3-9m0 18c-1.657 0-3-4.03-3-9s1.343-9 3-9m-9 9a9 9 0 019-9" />
-        </svg>
-      )
-    },
-    {
-      title: 'Sustainable Fashion',
-      desc: 'Championing eco-friendly, zero-waste practices that honor nature and tradition',
-      badgeBg: 'bg-gradient-to-br from-[#22C55E] to-[#16A34A]',
-      lineColor: 'bg-gradient-to-r from-[#22C55E] to-[#16A34A]',
-      icon: (
-        <svg className="w-6 h-6 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="2">
-          <path strokeLinecap="round" strokeLinejoin="round" d="M12 19l9 2-9-18-9 18 9-2zm0 0v-8" />
-        </svg>
-      )
-    },
-    {
-      title: 'Artisan Empowerment',
-      desc: 'Creating thriving communities by ensuring fair wages and dignified working conditions',
-      badgeBg: 'bg-gradient-to-br from-[#E11D48] to-[#F43F5E]',
-      lineColor: 'bg-gradient-to-r from-[#E11D48] to-[#F43F5E]',
-      icon: (
-        <svg className="w-6 h-6 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="2">
-          <path strokeLinecap="round" strokeLinejoin="round" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z" />
-        </svg>
-      )
-    },
-    {
-      title: 'Innovation in Tradition',
-      desc: 'Blending timeless techniques with contemporary designs for the modern wardrobe',
-      badgeBg: 'bg-gradient-to-br from-[#EA580C] to-[#F97316]',
-      lineColor: 'bg-gradient-to-r from-[#EA580C] to-[#F97316]',
-      icon: (
-        <svg className="w-6 h-6 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="2">
-          <path strokeLinecap="round" strokeLinejoin="round" d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6" />
-        </svg>
-      )
-    }
-  ];
+  // const visionCards = [
+  //   {
+  //     title: 'Global Recognition',
+  //     desc: 'Taking authentic Indian handloom to the world stage while preserving its traditional essence',
+  //     badgeBg: 'bg-gradient-to-br from-[#4F46E5] to-[#7C3AED]',
+  //     lineColor: 'bg-gradient-to-r from-[#4F46E5] to-[#7C3AED]',
+  //     icon: (
+  //       <svg className="w-6 h-6 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="2">
+  //         <path strokeLinecap="round" strokeLinejoin="round" d="M21 12a9 9 0 01-9 9m9-9a9 9 0 00-9-9m9 9H3m9 9a9 9 0 01-9-9m9 9c1.657 0 3-4.03 3-9s-1.343-9-3-9m0 18c-1.657 0-3-4.03-3-9s1.343-9 3-9m-9 9a9 9 0 019-9" />
+  //       </svg>
+  //     )
+  //   },
+  //   {
+  //     title: 'Sustainable Fashion',
+  //     desc: 'Championing eco-friendly, zero-waste practices that honor nature and tradition',
+  //     badgeBg: 'bg-gradient-to-br from-[#22C55E] to-[#16A34A]',
+  //     lineColor: 'bg-gradient-to-r from-[#22C55E] to-[#16A34A]',
+  //     icon: (
+  //       <svg className="w-6 h-6 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="2">
+  //         <path strokeLinecap="round" strokeLinejoin="round" d="M12 19l9 2-9-18-9 18 9-2zm0 0v-8" />
+  //       </svg>
+  //     )
+  //   },
+  //   {
+  //     title: 'Artisan Empowerment',
+  //     desc: 'Creating thriving communities by ensuring fair wages and dignified working conditions',
+  //     badgeBg: 'bg-gradient-to-br from-[#E11D48] to-[#F43F5E]',
+  //     lineColor: 'bg-gradient-to-r from-[#E11D48] to-[#F43F5E]',
+  //     icon: (
+  //       <svg className="w-6 h-6 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="2">
+  //         <path strokeLinecap="round" strokeLinejoin="round" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z" />
+  //       </svg>
+  //     )
+  //   },
+  //   {
+  //     title: 'Innovation in Tradition',
+  //     desc: 'Blending timeless techniques with contemporary designs for the modern wardrobe',
+  //     badgeBg: 'bg-gradient-to-br from-[#EA580C] to-[#F97316]',
+  //     lineColor: 'bg-gradient-to-r from-[#EA580C] to-[#F97316]',
+  //     icon: (
+  //       <svg className="w-6 h-6 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="2">
+  //         <path strokeLinecap="round" strokeLinejoin="round" d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6" />
+  //       </svg>
+  //     )
+  //   }
+  // ];
+
+
+
+
+
+  
+const visionCards = [
+  {
+    title: "Global Recognition",
+    desc: "Taking authentic Indian handloom to the world stage while preserving its timeless heritage.",
+    badgeBg: "bg-gradient-to-br from-[#5C1329] to-[#7A2940]",
+    lineColor: "bg-gradient-to-r from-[#5C1329] via-[#C5A059] to-[#E5D0A0]",
+    icon: (
+      <svg
+        className="w-6 h-6 text-[#E5C98A]"
+        fill="none"
+        viewBox="0 0 24 24"
+        stroke="currentColor"
+        strokeWidth="1.6"
+      >
+        <circle cx="12" cy="12" r="9" />
+        <path
+          strokeLinecap="round"
+          strokeLinejoin="round"
+          d="M3 12h18M12 3c2.5 2.5 3.5 5.5 3.5 9s-1 6.5-3.5 9c-2.5-2.5-3.5-5.5-3.5-9S9.5 5.5 12 3z"
+        />
+      </svg>
+    ),
+  },
+  {
+    title: "Sustainable Fashion",
+    desc: "Embracing mindful craftsmanship and sustainable practices that honour nature and tradition.",
+    badgeBg: "bg-gradient-to-br from-[#5C1329] to-[#7A2940]",
+    lineColor: "bg-gradient-to-r from-[#5C1329] via-[#C5A059] to-[#E5D0A0]",
+    icon: (
+      <svg
+        className="w-6 h-6 text-[#E5C98A]"
+        fill="none"
+        viewBox="0 0 24 24"
+        stroke="currentColor"
+        strokeWidth="1.6"
+      >
+        <path
+          strokeLinecap="round"
+          strokeLinejoin="round"
+          d="M12 21c-5-2-8-6-8-11 4 0 7 2 8 6 1-6 5-9 10-10 0 7-3 13-10 15z"
+        />
+      </svg>
+    ),
+  },
+  {
+    title: "Artisan Empowerment",
+    desc: "Celebrating the skilled artisans behind every weave and supporting dignified livelihoods.",
+    badgeBg: "bg-gradient-to-br from-[#5C1329] to-[#7A2940]",
+    lineColor: "bg-gradient-to-r from-[#5C1329] via-[#C5A059] to-[#E5D0A0]",
+    icon: (
+      <svg
+        className="w-6 h-6 text-[#E5C98A]"
+        fill="none"
+        viewBox="0 0 24 24"
+        stroke="currentColor"
+        strokeWidth="1.6"
+      >
+        <path
+          strokeLinecap="round"
+          strokeLinejoin="round"
+          d="M16 21v-2a4 4 0 00-4-4H8a4 4 0 00-4 4v2m6-10a4 4 0 100-8 4 4 0 000 8zm7-7.5a4 4 0 010 7.5m3 10v-2a4 4 0 00-3-3.87"
+        />
+      </svg>
+    ),
+  },
+  {
+    title: "Innovation in Tradition",
+    desc: "Blending timeless weaving techniques with contemporary designs for the modern wardrobe.",
+    badgeBg: "bg-gradient-to-br from-[#5C1329] to-[#7A2940]",
+    lineColor: "bg-gradient-to-r from-[#5C1329] via-[#C5A059] to-[#E5D0A0]",
+    icon: (
+      <svg
+        className="w-6 h-6 text-[#E5C98A]"
+        fill="none"
+        viewBox="0 0 24 24"
+        stroke="currentColor"
+        strokeWidth="1.6"
+      >
+        <path
+          strokeLinecap="round"
+          strokeLinejoin="round"
+          d="M12 3l1.9 5.8L20 11l-6.1 2.2L12 19l-1.9-5.8L4 11l6.1-2.2L12 3zm7 12l1.1 2.9L23 19l-2.9 1.1L19 23l-1.1-2.9L15 19l2.9-1.1L19 15z"
+        />
+      </svg>
+    ),
+  },
+];
+
+
 
   return (
     <div className="space-y-24 pb-20">
 
       {/* 1. HERO BANNER - From Home To Handloom (Perfect Framing, No Crop, Balanced Proportions) */}
-      <section className="relative w-full bg-[#FAF5F0] border-b border-[#C5A059]/20 py-4 sm:py-6 lg:py-8">
+      {/* <section className="relative w-full bg-[#FAF5F0] border-b border-[#C5A059]/20 py-4 sm:py-6 lg:py-8">
         <h1 className="sr-only">From Home To Handloom - The Airawati Story</h1>
         <div className="max-w-6xl lg:max-w-7xl mx-auto px-3 sm:px-6">
           <div className="relative rounded-2xl sm:rounded-3xl overflow-hidden shadow-xl border border-[#C5A059]/30 bg-[#F5ECE5]">
             <img 
-              src="/images/journey_hero_home_to_handloom.jpg" 
+              src="/handloom.png" 
               alt="From Home To Handloom - A journey that began at home, grew with belief, and reached many hearts through trusted hands" 
               className="w-full h-auto block" 
             />
           </div>
         </div>
-      </section>
+      </section> */}
+
+
+
+
+
+{/* From Home To Handloom - Responsive Section */}
+<section className="relative w-full bg-[#FAF5F0] border-b border-[#C5A059]/20 py-3 sm:py-5 lg:py-8">
+  <h1 className="sr-only">
+    From Home To Handloom - The Airawati Story
+  </h1>
+
+  <div className="w-full max-w-6xl lg:max-w-7xl mx-auto px-2 sm:px-4 lg:px-6">
+    <div className="relative w-full overflow-hidden rounded-xl sm:rounded-2xl lg:rounded-3xl shadow-lg border border-[#C5A059]/30 bg-[#F5ECE5]">
+
+      <picture>
+        {/* Mobile and Tablet Image */}
+        <source
+          media="(max-width: 1023px)"
+          srcSet="/handloom-3.png"
+        />
+
+        {/* Laptop and Desktop Image */}
+        <img
+          src="/handloom.png"
+          alt="From Home To Handloom - A journey that began at home, grew with belief, and reached many hearts through trusted hands"
+          className="block w-full h-auto object-contain"
+          loading="lazy"
+        />
+      </picture>
+
+    </div>
+  </div>
+</section>
+
+
+
+
 
       {/* 2. THE WOMAN BEHIND AIRAWATI */}
       <section className="max-w-6xl mx-auto px-4 sm:px-6">
@@ -135,7 +267,7 @@ export default function OurJourney() {
 
           <div className="md:col-span-5 aspect-[3/4] rounded-2xl sm:rounded-3xl overflow-hidden shadow-lg border border-[#C5A059]/30 bg-stone-100 group">
             <img 
-              src="/images/woman_behind_airawati_founders.jpg" 
+              src="/group.jpeg" 
               alt="The Woman Behind Airawati - Founders in Handwoven Sarees" 
               className="w-full h-full object-cover object-center group-hover:scale-105 transition-transform duration-700" 
             />
@@ -167,18 +299,58 @@ export default function OurJourney() {
           <div className="lg:col-span-5 relative group">
             <div className="aspect-[4/5] sm:aspect-square lg:aspect-[4/5] rounded-[28px] overflow-hidden shadow-xl border border-stone-200/80 bg-stone-100">
               <img 
-                src="/images/journey_maheshwar_dyed_yarn.jpg" 
+                src="/India.jpeg" 
                 alt="Maheshwar Handloom Yarn Dyeing" 
                 className="w-full h-full object-cover object-center group-hover:scale-105 transition-transform duration-700" 
               />
             </div>
             {/* Terracotta Location Pin Badge */}
-            <div className="absolute -bottom-4 -right-2 sm:-bottom-5 sm:right-2 w-12 h-12 sm:w-14 sm:h-14 bg-[#D14A29] rounded-2xl flex items-center justify-center text-white shadow-xl hover:scale-110 transition-transform">
+            {/* <div className="absolute -bottom-4 -right-2 sm:-bottom-5 sm:right-2 w-12 h-12 sm:w-14 sm:h-14 bg-[#D14A29] rounded-2xl flex items-center justify-center text-white shadow-xl hover:scale-110 transition-transform">
               <svg className="w-6 h-6 sm:w-7 sm:h-7" fill="currentColor" viewBox="0 0 24 24">
                 <path fillRule="evenodd" d="M11.54 22.351l.07.04.028.016a.76.76 0 00.723 0l.028-.015.071-.041a16.975 16.975 0 001.144-.742 19.58 19.58 0 002.683-2.282c1.944-1.99 3.963-4.98 3.963-8.827a8.25 8.25 0 00-16.5 0c0 3.846 2.02 6.837 3.963 8.827a19.58 19.58 0 002.682 2.282 16.975 16.975 0 001.145.742zM12 13.5a3 3 0 100-6 3 3 0 000 6z" clipRule="evenodd" />
               </svg>
-            </div>
+            </div> */}
+
+
+                        
+          <div
+            className="
+              absolute -bottom-3 -right-2
+              sm:-bottom-4 sm:right-2
+              w-12 h-12 sm:w-14 sm:h-14
+              rounded-2xl
+              bg-gradient-to-br from-[#D14A29] to-[#A92F19]
+              border border-white/30
+              flex items-center justify-center
+              text-white
+              shadow-[0_8px_24px_rgba(209,74,41,0.28)]
+              transition-all duration-300 ease-out
+              hover:scale-110 hover:-translate-y-1
+              hover:shadow-[0_12px_28px_rgba(209,74,41,0.38)]
+              z-10
+            "
+          >
+            <svg
+              className="w-6 h-6 sm:w-7 sm:h-7"
+              xmlns="http://www.w3.org/2000/svg"
+              fill="none"
+              viewBox="0 0 24 24"
+              strokeWidth={1.8}
+              stroke="currentColor"
+            >
+              <path
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                d="M15 10.5a3 3 0 1 1-6 0 3 3 0 0 1 6 0Z"
+              />
+              <path
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                d="M19.5 10.5c0 7.142-7.5 11.25-7.5 11.25S4.5 17.642 4.5 10.5a7.5 7.5 0 1 1 15 0Z"
+              />
+            </svg>
           </div>
+       </div>
 
           {/* Right: Story Details & 2 Feature Cards */}
           <div className="lg:col-span-7 space-y-6">
@@ -354,7 +526,7 @@ export default function OurJourney() {
         </div>
 
         {/* 6. THE AIRAWATI PROMISE BANNER (Matching Screenshot Exactly) */}
-        <div className="mt-14 sm:mt-16 relative overflow-hidden rounded-[28px] sm:rounded-[36px] bg-gradient-to-r from-[#6D1F28] via-[#8E2625] to-[#CE3C23] p-8 sm:p-14 text-white text-center shadow-2xl space-y-6">
+        {/* <div className="mt-14 sm:mt-16 relative overflow-hidden rounded-[28px] sm:rounded-[36px] bg-gradient-to-r from-[#6D1F28] via-[#8E2625] to-[#CE3C23] p-8 sm:p-14 text-white text-center shadow-2xl space-y-6">
           <h3 className="font-serif text-3xl sm:text-4xl md:text-5xl font-bold tracking-tight text-white">
             The Airawati Promise
           </h3>
@@ -364,12 +536,71 @@ export default function OurJourney() {
           </p>
 
           {/* Centered Line and Tagline */}
-          <div className="flex items-center justify-center gap-3 sm:gap-4 pt-2 text-stone-200 text-xs sm:text-sm font-light">
+          {/* <div className="flex items-center justify-center gap-3 sm:gap-4 pt-2 text-stone-200 text-xs sm:text-sm font-light">
             <span className="w-10 sm:w-20 h-px bg-white/40"></span>
             <span className="tracking-wide">Woven with Love, Delivered with Pride</span>
             <span className="w-10 sm:w-20 h-px bg-white/40"></span>
           </div>
-        </div>
+        </div> */}
+
+
+                      
+          {/* 6. THE AIRAWATI PROMISE BANNER */}
+          <section className="mt-14 sm:mt-16 lg:mt-20 px-0">
+            <div className="relative isolate overflow-hidden rounded-[24px] sm:rounded-[32px] lg:rounded-[40px] bg-gradient-to-br from-[#3D0C1B] via-[#5C1329] to-[#781F35] px-5 py-10 sm:px-10 sm:py-14 lg:px-16 lg:py-16 text-center text-white shadow-[0_20px_60px_rgba(92,19,41,0.20)]">
+
+              {/* Subtle decorative glow */}
+              <div className="pointer-events-none absolute -top-24 -right-20 h-64 w-64 rounded-full bg-[#C5A059]/10 blur-3xl" />
+              <div className="pointer-events-none absolute -bottom-24 -left-20 h-64 w-64 rounded-full bg-[#C5A059]/10 blur-3xl" />
+
+              {/* Elegant inner border */}
+              <div className="pointer-events-none absolute inset-3 sm:inset-4 rounded-[18px] sm:rounded-[25px] border border-[#C5A059]/35" />
+
+              <div className="relative z-10 mx-auto max-w-4xl space-y-5 sm:space-y-6">
+
+                {/* Brand label */}
+                <div className="flex items-center justify-center gap-3">
+                  <span className="h-px w-8 sm:w-12 bg-[#C5A059]/80" />
+                  <span className="text-[10px] sm:text-xs uppercase tracking-[0.28em] sm:tracking-[0.35em] font-medium text-[#E5C98B]">
+                    The Essence of Airawati
+                  </span>
+                  <span className="h-px w-8 sm:w-12 bg-[#C5A059]/80" />
+                </div>
+
+                {/* Main heading */}
+                <h3 className="font-serif text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-medium leading-tight tracking-tight text-[#FFF9F0]">
+                  The Airawati Promise
+                </h3>
+
+                {/* Decorative ornament */}
+                <div className="flex items-center justify-center gap-2">
+                  <span className="h-px w-10 sm:w-16 bg-gradient-to-r from-transparent to-[#C5A059]" />
+                  <span className="text-[#D9B66F] text-lg leading-none">✦</span>
+                  <span className="h-px w-10 sm:w-16 bg-gradient-to-l from-transparent to-[#C5A059]" />
+                </div>
+
+                {/* Brand statement */}
+                <p className="mx-auto max-w-3xl text-sm sm:text-base md:text-lg leading-7 sm:leading-8 text-[#F3E8E1]/90 font-light">
+                  We envision a world where every handwoven saree tells a story of
+                  heritage, every artisan is celebrated, and every customer feels
+                  the pride of wearing authentic Indian craftsmanship. Airawati is
+                  more than a brand — it is a commitment to preserving, celebrating,
+                  and carrying India’s timeless handloom legacy into the future.
+                </p>
+
+                {/* Signature tagline */}
+                <div className="flex flex-col items-center justify-center gap-3 pt-3 sm:pt-4">
+                  <div className="h-px w-16 bg-[#C5A059]/70" />
+                  <p className="font-serif italic text-base sm:text-lg md:text-xl tracking-wide text-[#E5C98B]">
+                    Woven with Love, Delivered with Pride
+                  </p>
+                </div>
+
+              </div>
+            </div>
+          </section>
+
+
       </section>
 
     </div>

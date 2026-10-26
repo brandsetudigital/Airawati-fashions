@@ -56,7 +56,7 @@ export default function Artisans() {
         <div className="max-w-6xl lg:max-w-7xl mx-auto px-3 sm:px-6">
           <div 
             className="relative rounded-2xl sm:rounded-3xl overflow-hidden shadow-xl border border-[#C5A059]/30 min-h-[360px] sm:min-h-[440px] md:min-h-[500px] lg:min-h-[540px] flex items-center justify-center text-white bg-cover bg-center"
-            style={{ backgroundImage: "url('/images/artisans_hero_workshop.jpg')" }}
+            style={{ backgroundImage: "url('/acc-4.png')" }}
           >
             {/* Luxury Backdrop Overlay for clear readability */}
             <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/50 to-black/40 backdrop-blur-[0.5px]"></div>
@@ -138,7 +138,7 @@ export default function Artisans() {
           <p className="text-stone-500 text-xs mt-1">Stories from the heart of our artisan community</p>
         </div>
 
-        <div className="bg-white/90 backdrop-blur-md rounded-3xl p-6 sm:p-10 border border-[#C5A059]/30 shadow-luxury-lg grid grid-cols-1 md:grid-cols-12 gap-8 items-center">
+        {/* <div className="bg-white/90 backdrop-blur-md rounded-3xl p-6 sm:p-10 border border-[#C5A059]/30 shadow-luxury-lg grid grid-cols-1 md:grid-cols-12 gap-8 items-center">
           <div className="md:col-span-7 space-y-4">
             <div>
               <h3 className="font-serif text-3xl font-bold text-[#1E060D]">Lakshmi Devi</h3>
@@ -163,115 +163,249 @@ export default function Artisans() {
           <div className="md:col-span-5 aspect-[3/4] rounded-2xl overflow-hidden shadow-md border-2 border-[#C5A059]/40">
             <img src="/images/artisan_lakshmi_devi.jpg" alt="Lakshmi Devi" className="w-full h-full object-cover" />
           </div>
-        </div>
-      </section>
+        </div> */}
 
-      {/* The Art of Handloom */}
-      <section className="max-w-6xl mx-auto px-4 sm:px-6 text-center">
-        <div className="flex items-center justify-center gap-2 mb-2">
-          <span className="h-px w-8 bg-[#C5A059]"></span>
-          <span className="text-[#C5A059] text-xs font-serif italic">&#10022;</span>
-          <span className="h-px w-8 bg-[#C5A059]"></span>
-        </div>
-        <h3 className="font-serif text-3xl font-bold text-[#1E060D] mb-2">
-          The Art of <span className="text-[#5C1329] italic font-normal">Handloom</span>
-        </h3>
-        <p className="text-stone-500 text-xs mb-8">A glimpse into the intricate world of traditional weaving</p>
 
-        <div className="grid grid-cols-1 sm:grid-cols-3 gap-6">
-          {/* 1. Pink Loom & Roller */}
-          <div className="group relative aspect-[4/3] rounded-2xl overflow-hidden shadow-lg border border-[#C5A059]/30 bg-stone-100">
-            <img 
-              src="/images/handloom_pink_loom.jpg" 
-              alt="Traditional Handloom Setup" 
-              className="w-full h-full object-cover object-center group-hover:scale-105 transition-transform duration-700" 
+
+
+
+
+
+
+{/* ================= MEET OUR MASTER WEAVER ================= */}
+<section className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-8 sm:py-12">
+
+  <div className="relative overflow-hidden rounded-2xl sm:rounded-3xl bg-[#FFFCF7] border border-[#C5A059]/25 shadow-[0_12px_45px_rgba(61,11,27,0.07)]">
+
+    {/* Subtle Decorative Accent */}
+    <div className="absolute top-0 left-0 w-24 h-24 border-t border-l border-[#C5A059]/40 rounded-tl-2xl sm:rounded-tl-3xl pointer-events-none" />
+
+    <div className="grid grid-cols-1 md:grid-cols-12 items-center gap-6 sm:gap-8 md:gap-10 p-5 sm:p-8 md:p-10 lg:p-12">
+
+      {/* Artisan Image */}
+      <div className="md:col-span-5 order-1">
+        <div className="relative max-w-sm mx-auto md:max-w-none">
+
+          <div className="absolute -inset-2 rounded-2xl border border-[#C5A059]/40" />
+
+          <div className="relative aspect-[4/5] overflow-hidden rounded-xl sm:rounded-2xl bg-[#F5EBDD]">
+            <img
+              src="/images/artisan_lakshmi_devi.jpg"
+              alt="Lakshmi Devi, master handloom weaver"
+              loading="lazy"
+              className="w-full h-full object-cover object-center transition-transform duration-700 hover:scale-[1.03]"
             />
-            <div className="absolute inset-0 bg-gradient-to-t from-black/75 via-black/20 to-transparent flex flex-col justify-end p-4 text-left">
-              <span className="text-[10px] tracking-widest uppercase font-semibold text-[#F9D783]">Loom Craft</span>
-              <h4 className="font-serif text-white text-base font-bold">Traditional Handloom Setup</h4>
-              <p className="text-stone-300 text-[11px] font-light leading-snug">Vibrant pure silk threads woven with authentic precision</p>
-            </div>
           </div>
 
-          {/* 2. Warp Threads by Hand */}
-          <div className="group relative aspect-[4/3] rounded-2xl overflow-hidden shadow-lg border border-[#C5A059]/30 bg-stone-100">
-            <img 
-              src="/images/handloom_warp_hands.jpg" 
-              alt="Artisan Warping & Thread Alignment" 
-              className="w-full h-full object-cover object-center group-hover:scale-105 transition-transform duration-700" 
-            />
-            <div className="absolute inset-0 bg-gradient-to-t from-black/75 via-black/20 to-transparent flex flex-col justify-end p-4 text-left">
-              <span className="text-[10px] tracking-widest uppercase font-semibold text-[#F9D783]">Artisan Precision</span>
-              <h4 className="font-serif text-white text-base font-bold">Hand Warping &amp; Alignment</h4>
-              <p className="text-stone-300 text-[11px] font-light leading-snug">Individual warp threads aligned by master weavers with generational skill</p>
-            </div>
+          {/* Image Caption */}
+          <div className="absolute bottom-3 left-3 right-3 rounded-lg bg-[#FFFCF7]/95 backdrop-blur-sm px-4 py-3 border border-[#C5A059]/25">
+            <p className="font-serif text-base text-[#5C1329]">
+              Woven with tradition
+            </p>
+            <p className="text-[9px] uppercase tracking-[0.2em] text-stone-500 mt-1">
+              Crafted by skilled hands
+            </p>
           </div>
 
-          {/* 3. Master Pit Loom Weaving */}
-          <div className="group relative aspect-[4/3] rounded-2xl overflow-hidden shadow-lg border border-[#C5A059]/30 bg-stone-100">
-            <img 
-              src="/images/handloom_pit_loom_weaving.jpg" 
-              alt="Authentic Pit Loom Weaving" 
-              className="w-full h-full object-cover object-[center_55%] group-hover:scale-105 transition-transform duration-700" 
-            />
-            <div className="absolute inset-0 bg-gradient-to-t from-black/75 via-black/20 to-transparent flex flex-col justify-end p-4 text-left">
-              <span className="text-[10px] tracking-widest uppercase font-semibold text-[#F9D783]">Heritage Craft</span>
-              <h4 className="font-serif text-white text-base font-bold">Pit Loom Rhythm &amp; Shuttle</h4>
-              <p className="text-stone-300 text-[11px] font-light leading-snug">Synchronized wooden shuttle creating heritage sarees thread by thread</p>
-            </div>
+        </div>
+      </div>
+
+      {/* Artisan Story */}
+      <div className="md:col-span-7 order-2 space-y-5 sm:space-y-6">
+
+        {/* Eyebrow */}
+        <div>
+          <div className="flex items-center gap-3 mb-4">
+            <span className="w-8 h-px bg-[#C5A059]" />
+            <span className="text-[9px] sm:text-[10px] uppercase tracking-[0.3em] font-semibold text-[#A47A36]">
+              The Hands Behind the Art
+            </span>
           </div>
+
+          <h3 className="font-serif text-3xl sm:text-4xl lg:text-5xl font-medium leading-tight text-[#3D0B1B]">
+            Meet
+            <span className="block italic font-normal text-[#9B4659] mt-1">
+               LakshmiDevi
+            </span>
+          </h3>
+
+          <p className="text-[10px] sm:text-xs uppercase tracking-[0.16em] font-medium text-[#A47A36] mt-3">
+            Master Handloom Weaver
+            <span className="mx-2 text-[#C5A059]">✦</span>
+            15 Years of Experience
+          </p>
         </div>
+
+        {/* Artisan Quote */}
+        <blockquote className="relative border-l-2 border-[#C5A059] pl-4 sm:pl-5 py-1">
+          <span className="absolute -top-4 right-0 font-serif text-5xl text-[#C5A059]/25">
+            ”
+          </span>
+          <p className="font-serif text-lg sm:text-xl italic leading-relaxed text-[#5C1329]">
+            “I learned to weave from my mother when I was just twelve years old. The loom was like a second home to me.”
+          </p>
+        </blockquote>
+
+        {/* Story */}
+        <div className="space-y-3 text-xs sm:text-sm leading-6 sm:leading-7 text-stone-600 font-light">
+          <p>
+            For Lakshmi Devi, weaving is more than a craft — it is a legacy passed down through generations. Her expertise in intricate zari borders and traditional Chanderi patterns brings every saree to life.
+          </p>
+
+          <p>
+            Each creation takes 10 to 20 days, depending on its intricacy. With every thread, she weaves patience, heritage, and the joy of becoming part of someone's special moments.
+          </p>
+
+          <p>
+            Through Airawati, Lakshmi continues to preserve her weaving heritage while supporting her family and inspiring the next generation of artisans.
+          </p>
+        </div>
+
+        {/* Closing Detail */}
+        <div className="flex items-center gap-3 pt-1">
+          <span className="w-10 h-px bg-[#C5A059]" />
+          <span className="text-[10px] uppercase tracking-[0.2em] text-[#A47A36]">
+            A legacy in every thread
+          </span>
+        </div>
+
+      </div>
+    </div>
+  </div>
+</section>
+{/* ================= END MASTER WEAVER SECTION ================= */}
+
+
+
+
       </section>
 
-      {/* From Yarn to Saree Section */}
-      <section className="max-w-5xl mx-auto px-4 sm:px-6 text-center">
-        {/* Top Ornament */}
-        <div className="flex items-center justify-center mb-1">
-          <span className="text-[#C5A059] text-xs font-serif italic">&#10022;</span>
-        </div>
 
-        {/* Section Heading */}
-        <h2 className="font-serif text-3xl sm:text-4xl md:text-5xl font-bold tracking-tight mb-2.5">
-          <span className="text-[#1E2530]">From Yarn</span>{' '}
-          <span className="text-[#B4332C]">to Saree</span>
-        </h2>
-        
-        {/* Subtitle */}
-        <p className="text-[#786F66] text-xs sm:text-sm font-light tracking-wide mb-12 sm:mb-16">
-          The journey of creating a handwoven masterpiece
-        </p>
+{/* ================= FROM YARN TO SAREE ================= */}
+<section className="w-full bg-[#F8F1E8] py-10 sm:py-14 lg:py-20 overflow-hidden">
+  <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
 
-        {/* 3-Column x 2-Row Process Steps Grid */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-y-12 sm:gap-y-14 md:gap-y-16 gap-x-8 sm:gap-x-12">
-          {yarnToSareeSteps.map((step) => (
-            <div key={step.num} className="flex flex-col items-center text-center px-2 group">
-              {/* Circular Number Badge */}
-              <div className="w-14 h-14 sm:w-16 sm:h-16 rounded-full bg-[#EFE8DD] flex items-center justify-center mb-4 sm:mb-5 shadow-sm group-hover:scale-105 transition-transform duration-300">
-                <span className="font-serif text-sm sm:text-base font-semibold text-[#A66352] tracking-wider">
-                  {step.num}
-                </span>
-              </div>
+    {/* Section Heading */}
+    <div className="text-center max-w-3xl mx-auto mb-8 sm:mb-10 lg:mb-14">
 
-              {/* Step Title */}
-              <h4 className="font-serif text-base sm:text-lg font-bold text-[#1E2530] mb-2">
-                {step.title}
-              </h4>
+      <div className="flex items-center justify-center gap-3 mb-4">
+        <span className="w-9 sm:w-12 h-px bg-[#5C1329]/50" />
+        <span className="text-[#5C1329] text-sm">✧</span>
+        <span className="w-9 sm:w-12 h-px bg-[#5C1329]/50" />
+      </div>
 
-              {/* Step Description */}
-              <p className="text-xs sm:text-[13px] text-[#786F66] font-light leading-relaxed max-w-[270px]">
-                {step.desc}
-              </p>
-            </div>
-          ))}
-        </div>
+      <p className="text-[9px] sm:text-[10px] uppercase tracking-[0.3em] font-semibold text-[#A47A36] mb-3">
+        From Our Hands to Yours
+      </p>
 
-        {/* Bottom Decorative Ornament */}
-        <div className="flex items-center justify-center gap-3 pt-12 sm:pt-16">
-          <span className="h-px w-14 sm:w-20 bg-[#C5A059]/40"></span>
-          <span className="text-[#C5A059] text-base leading-none">&#10022;</span>
-          <span className="h-px w-14 sm:w-20 bg-[#C5A059]/40"></span>
-        </div>
-      </section>
+      <h2 className="font-serif text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-medium leading-tight text-[#3D0B1B]">
+        From Yarn{" "}
+        <span className="italic font-normal text-[#8B3A50]">
+          to Saree
+        </span>
+      </h2>
+
+      <p className="max-w-xl mx-auto mt-3 sm:mt-4 text-xs sm:text-sm leading-6 sm:leading-7 text-stone-600 font-light">
+        Discover the thoughtful process that transforms simple threads
+        into heirloom-worthy handwoven sarees.
+      </p>
+    </div>
+
+    {/* Responsive Process Cards — No Arrows */}
+    <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-5 md:gap-6 lg:gap-7">
+
+      {yarnToSareeSteps.map((step) => (
+        <article
+          key={step.num}
+          className="group relative min-w-0 min-h-[210px] sm:min-h-[230px]
+          flex flex-col items-center justify-center text-center
+          bg-[#FFFCF7] border border-[#C5A059]/30
+          rounded-xl sm:rounded-2xl px-5 py-6 sm:px-6 sm:py-8
+          transition-all duration-500 ease-out
+          hover:-translate-y-1.5
+          hover:border-[#5C1329]/40
+          hover:shadow-[0_14px_35px_rgba(61,11,27,0.10)]
+          active:scale-[0.99]"
+        >
+
+          {/* Animated Top Accent */}
+          <span className="absolute top-0 left-1/2 -translate-x-1/2
+            w-0 h-[2px] rounded-full bg-[#C5A059]
+            transition-all duration-500 group-hover:w-1/2"
+          />
+
+          {/* Number Badge */}
+          <div className="w-12 h-12 sm:w-14 sm:h-14 md:w-16 md:h-16
+            shrink-0 flex items-center justify-center rounded-full
+            border border-[#C5A059]/60 bg-[#F8F0E5] mb-4 sm:mb-5
+            transition-all duration-500
+            group-hover:bg-[#5C1329]
+            group-hover:border-[#5C1329]
+            group-hover:scale-105"
+          >
+            <span className="font-serif text-sm sm:text-base md:text-lg
+              text-[#5C1329] transition-colors duration-300
+              group-hover:text-white"
+            >
+              {step.num}
+            </span>
+          </div>
+
+          {/* Decorative Divider */}
+          <span className="w-7 h-px bg-[#C5A059] mb-3 sm:mb-4
+            transition-all duration-500
+            group-hover:w-12 group-hover:h-[2px]"
+          />
+
+          {/* Step Title */}
+          <h3 className="font-serif text-base sm:text-lg md:text-xl
+            font-medium leading-snug text-[#3D0B1B] mb-2 sm:mb-3
+            transition-colors duration-300
+            group-hover:text-[#8B3A50]"
+          >
+            {step.title}
+          </h3>
+
+          {/* Step Description */}
+          <p className="w-full max-w-sm text-xs sm:text-sm
+            leading-5 sm:leading-6 text-stone-600 font-light"
+          >
+            {step.desc}
+          </p>
+
+          {/* Bottom Ornament */}
+          <span className="mt-4 text-xs text-[#C5A059]/60
+            transition-all duration-300
+            group-hover:text-[#C5A059]
+            group-hover:scale-110"
+            aria-hidden="true"
+          >
+            ✧
+          </span>
+
+        </article>
+      ))}
+
+    </div>
+
+    {/* Closing Statement */}
+    <div className="flex flex-col items-center mt-8 sm:mt-10 lg:mt-14">
+      <div className="flex items-center justify-center gap-3">
+        <span className="w-8 sm:w-12 h-px bg-[#5C1329]/40" />
+        <span className="text-[#A47A36] text-sm">✧</span>
+        <span className="w-8 sm:w-12 h-px bg-[#5C1329]/40" />
+      </div>
+
+      <p className="mt-3 sm:mt-4 font-serif italic text-xs sm:text-sm md:text-base text-[#5C1329] text-center">
+        Woven with tradition. Created to be treasured.
+      </p>
+    </div>
+
+  </div>
+</section>
+{/* ================= END FROM YARN TO SAREE ================= */}
+
+   
 
       {/* Our Artisan Community */}
       <section className="max-w-6xl mx-auto px-4 sm:px-6 text-center">

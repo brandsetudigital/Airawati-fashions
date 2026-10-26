@@ -117,30 +117,30 @@ export default function Accessories() {
   return (
     <div className="space-y-16 pb-20 bg-[#FDF9F7] min-h-screen text-stone-800">
 
-      {/* Hero Banner with Golden Mandala on Left */}
-      <section 
-        className="relative w-full h-[280px] xs:h-[320px] sm:h-[360px] md:h-[400px] flex items-center justify-center overflow-hidden border-b border-[#C5A059]/20"
-        style={{
-          backgroundColor: '#FDF0CE',
-        }}
-      >
-        <img 
-          src="/images/shop_hero_mandala_left_clean.png" 
-          alt="Golden Mandala" 
-          className="absolute left-0 top-0 h-full w-auto max-w-[28%] sm:max-w-[40%] lg:max-w-[34%] object-contain object-left pointer-events-none select-none z-0 opacity-80 sm:opacity-100" 
-        />
 
-        <div className="relative z-10 flex flex-col items-center justify-center text-center px-4 max-w-xl mx-auto">
-          <h1 className="font-serif text-3xl sm:text-6xl md:text-7xl font-bold tracking-tight text-center">
-            <span className="text-[#5C1329]">Modern&amp;</span>
-            <span className="text-[#B83227] ml-0.5 sm:ml-1">Confident</span>
-          </h1>
 
-          <p className="mt-3 sm:mt-4 text-[#70594D] text-xs sm:text-sm md:text-base font-light tracking-wide max-w-md mx-auto leading-relaxed text-center">
-            We're here to help you discover the perfect accessories to complete your look
-          </p>
-        </div>
-      </section>
+{/* RESPONSIVE AIRAWATI HERO */}
+<section className="w-full overflow-hidden bg-[#FDF0CE]">
+  <picture>
+    {/* Mobile banner */}
+    <source
+      media="(max-width: 640px)"
+      srcSet="/acc-2.png"
+    />
+
+    {/* Tablet and desktop banner */}
+    <img
+      src="/acc-1.png"
+      alt="Airawati Handmade Sarees"
+      className="block w-full h-auto"
+      fetchPriority="high"
+    />
+  </picture>
+</section>
+
+     
+
+
 
       {/* Main Header */}
       <section className="max-w-6xl mx-auto px-4 sm:px-6">
