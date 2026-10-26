@@ -1,49 +1,71 @@
 import React, { useState, useEffect, useRef, useCallback } from 'react';
 
+// 
+
+
 const COLLECTION_ITEMS = [
   {
     id: 1,
-    image: '/images/shop_collection_1.jpg',
+    image: '/scollection-1.jpeg',
     alt: 'Bridal Handwoven Saree',
     name: 'Bridal Heritage',
   },
   {
     id: 2,
-    image: '/images/shop_collection_2.jpg',
+    image: '/scollection-2.jpeg',
     alt: 'Peacock Green & Purple Silk Saree',
     name: 'Peacock Zari Silk',
   },
   {
     id: 3,
-    image: '/images/shop_collection_3.jpg',
+    image: '/scollection-3.jpeg',
     alt: 'Banarasi Brocade Silk Saree',
-    name: 'Brocade Masterpiece',
+    name: 'Banarasi Brocade',
   },
   {
     id: 4,
-    image: '/images/shop_collection_4.jpg',
+    image: '/scollection-4.jpeg',
     alt: 'Royal Heritage Magenta & Blue Saree',
     name: 'Royal Magenta Heirloom',
   },
   {
     id: 5,
-    image: '/images/shop_collection_5.jpg',
+    image: '/scollection-5.jpeg',
     alt: 'Traditional Purple & Pink Saree',
     name: 'Temple Border Silk',
   },
   {
     id: 6,
-    image: '/images/shop_collection_6.jpg',
+    image: '/scollection-6.jpeg',
     alt: 'Classic Red, Yellow & Green Saree',
-    name: 'Festive Tri-Color',
+    name: 'Festive Rangoli Silk',
   },
   {
     id: 7,
-    image: '/images/shop_collection_7.jpg',
+    image: '/scollection-7.jpeg',
     alt: 'Royal Heritage Staircase Sarees',
-    name: 'Palace Corridor Silk',
+    name: 'Palace Heritage',
+  },
+  {
+    id: 8,
+    image: '/scollection-8.jpeg',
+    alt: 'Elegant Traditional Silk Saree',
+    name: 'Regal Noor',
+  },
+  {
+    id: 9,
+    image: '/scollection-9.jpeg',
+    alt: 'Traditional Designer Saree',
+    name: 'Mehfil Elegance',
+  },
+  {
+    id: 10,
+    image: '/scollection-10.jpeg',
+    alt: 'Premium Heritage Saree',
+    name: 'Sunehri Parampara',
   },
 ];
+
 
 // Tripled to 21 items for seamless infinite looping
 const EXTENDED_ITEMS = [

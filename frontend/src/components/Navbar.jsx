@@ -46,30 +46,107 @@ export default function Navbar() {
 
   return (
     <>
-      <header className="bg-[#5C1329] text-[#FAF6F0] text-[9px] sm:text-[11px] py-1.5 sm:py-2 px-3 sm:px-4 text-center tracking-wider sm:tracking-widest uppercase border-b border-[#C5A059]/30 leading-tight">
+      {/* <header className="w-full bg-[#5C1329] text-[#FAF6F0] text-[9px] sm:text-[11px] py-2 sm:py-2.5 px-3 sm:px-6 text-center tracking-wider sm:tracking-widest uppercase border-b border-[#C5A059]/30 leading-relaxed">
         <p>Handcrafted In India &bull; Complimentary Worldwide Shipping On Orders Over &dollar;200 &bull; 100% Authentic Handloom Certified</p>
-      </header>
+      </header> */}
 
-      <nav className="bg-[#FAF6F0]/95 backdrop-blur-md sticky top-0 z-40 border-b border-[#C5A059]/20 transition-all">
-        <div className="max-w-7xl mx-auto px-3 sm:px-6 py-2.5 sm:py-3.5 flex items-center justify-between">
+
+
+
+
+
+<header className="w-full overflow-hidden bg-[#5C1329] text-[#FAF6F0] border-b border-[#C5A059]/40 py-2.5 sm:py-3">
+  <div className="flex w-full overflow-hidden">
+    <div
+      className="flex w-max shrink-0"
+      style={{
+        animation: "airawatiMarquee 55s linear infinite",
+      }}
+    >
+      {[1, 2, 3, 4].map((item) => (
+        <p
+          key={item}
+          className="flex shrink-0 items-center whitespace-nowrap px-4 sm:px-8 text-[9px] sm:text-[10px] md:text-[11px] font-medium uppercase tracking-[0.14em] sm:tracking-[0.2em]"
+        >
+          Timeless Indian Handloom, Woven With Love
+          <span className="mx-4 sm:mx-6 text-[#C5A059]">✦</span>
+
+          Elegance Woven Into Every Thread 
+          <span className="mx-4 sm:mx-6 text-[#C5A059]">✦</span>
+
+          A Legacy Of Craftsmanship & Grace 
+          <span className="mx-4 sm:mx-6 text-[#C5A059]">✦</span>
+
+          Drape Yourself In Timeless Tradition 
+          <span className="mx-4 sm:mx-6 text-[#C5A059]">✦</span>
+
+          Every Saree Tells A Beautiful Story 
+          
+
+          Authentic Weaves, Exceptional Craftsmanship
+          <span className="mx-4 sm:mx-6 text-[#C5A059]">✦</span>
+
+          Discover The Art Of Indian Elegance
+          <span className="mx-4 sm:mx-6 text-[#C5A059]">✦</span>
+        </p>
+      ))}
+    </div>
+  </div>
+
+  <style>{`
+    @keyframes airawatiMarquee {
+      from {
+        transform: translateX(0);
+      }
+      to {
+        transform: translateX(-50%);
+      }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      header {
+        --marquee-motion: paused;
+      }
+    }
+  `}</style>
+</header>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+      <nav className="w-full bg-[#FAF6F0]/95 backdrop-blur-md sticky top-0 z-40 border-b border-[#C5A059]/20 transition-all">
+        <div className="w-full max-w-none px-3 sm:px-6 lg:px-8 2xl:px-12 py-2.5 sm:py-3 flex items-center justify-between gap-3 lg:gap-5">
           
           <button
             onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-            className="lg:hidden p-1.5 text-[#5C1329] hover:text-[#C5A059] transition-colors"
+            className="lg:hidden shrink-0 p-1.5 text-[#5C1329] hover:text-[#C5A059] transition-colors"
             aria-label="Toggle Navigation Menu"
           >
             {mobileMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
           </button>
 
-          <Link to="/" className="flex items-center group py-0.5" title="Airawati - Every handwoven saree, one home">
-            <img 
-              src="/images/airawati_logo.png" 
-              alt="Airawati" 
-              className="h-10 sm:h-12 md:h-14 w-auto object-contain transition-transform group-hover:scale-105" 
+          <Link to="/" className="flex shrink-0 items-center group py-0.5" title="Airawati - Every handwoven saree, one home">
+            <img
+              src="/airawati_logo.png"
+              alt="Airawati"
+              className="h-10 w-auto max-w-[118px] object-contain sm:h-12 sm:max-w-[145px] lg:h-14 lg:max-w-[165px] 2xl:h-16 2xl:max-w-[185px] transition-transform duration-300 group-hover:scale-[1.03]"
             />
           </Link>
 
-          <div className="hidden lg:flex items-center space-x-8 text-xs font-semibold tracking-wider uppercase">
+          <div className="hidden lg:flex flex-1 items-center justify-center gap-4 xl:gap-6 2xl:gap-8 text-[10px] xl:text-[11px] 2xl:text-xs font-semibold tracking-wide 2xl:tracking-wider uppercase">
             {navLinks.map((link) => {
               const isActive = location.pathname === link.path;
               return (
@@ -88,7 +165,7 @@ export default function Navbar() {
             })}
           </div>
 
-          <div className="flex items-center space-x-2.5 sm:space-x-5">
+          <div className="flex shrink-0 items-center gap-2 sm:gap-3 lg:gap-3 xl:gap-4 2xl:gap-5">
             <button
               onClick={() => {
                 const q = prompt("Search Airawati collection (e.g. Maheshwari, Banarasi, Chanderi):");
@@ -213,7 +290,7 @@ export default function Navbar() {
 
         {/* MOBILE NAVIGATION DRAWER */}
         {mobileMenuOpen && (
-          <div className="lg:hidden bg-[#FAF6F0] border-t border-[#C5A059]/20 px-4 sm:px-6 py-5 space-y-4 shadow-xl animate-fadeIn max-h-[85vh] overflow-y-auto">
+          <div className="lg:hidden w-full bg-[#FAF6F0] border-t border-[#C5A059]/20 px-4 sm:px-6 lg:px-8 py-5 space-y-4 shadow-xl animate-fadeIn max-h-[85vh] overflow-y-auto">
             {/* User status card on mobile */}
             {isLoggedIn ? (
               <div className="p-3.5 bg-white rounded-xl border border-[#C5A059]/25 flex items-center justify-between shadow-2xs">

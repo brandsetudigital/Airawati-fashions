@@ -1,123 +1,204 @@
-// frontend/src/components/Footer.jsx
-import React from 'react';
-import { Link } from 'react-router-dom';
+import React from "react";
+import { Link } from "react-router-dom";
+
+const footerLinks = [
+  { label: "Our Story", to: "/journey" },
+  { label: "Shop Sarees", to: "/shop" },
+  { label: "Boutique Blouses", to: "/boutique" },
+  { label: "Temple Accessories", to: "/accessories" },
+  { label: "Artisans", to: "/artisans" },
+  { label: "Contact Us", to: "/contact" },
+];
+
+const socialLinks = [
+  {
+    label: "Facebook",
+    href: "https://www.facebook.com/p/Airawati-fashions-61579817516749/",
+    icon: (
+      <svg viewBox="0 0 24 24" fill="currentColor" className="h-4 w-4">
+        <path d="M24 12.073C24 5.446 18.627.073 12 .073S0 5.446 0 12.073c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z" />
+      </svg>
+    ),
+  },
+  {
+    label: "Instagram",
+    href: "https://www.instagram.com/airawatifashions/",
+    icon: (
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.7" className="h-4 w-4">
+        <rect x="3" y="3" width="18" height="18" rx="5" />
+        <circle cx="12" cy="12" r="4" />
+        <circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none" />
+      </svg>
+    ),
+  },
+  {
+    label: "WhatsApp",
+    href: "https://api.whatsapp.com/send?phone=918982065895",
+    icon: (
+      <svg viewBox="0 0 24 24" fill="currentColor" className="h-4 w-4">
+        <path d="M20.52 3.48A11.87 11.87 0 0012.06 0C5.5 0 .16 5.34.16 11.9c0 2.1.55 4.16 1.6 5.98L.06 24l6.28-1.65a11.9 11.9 0 005.7 1.45h.01c6.56 0 11.9-5.34 11.9-11.9 0-3.18-1.24-6.17-3.43-8.42zM12.05 21.8a9.9 9.9 0 01-5.04-1.38l-.36-.21-3.73.98.99-3.64-.24-.38a9.86 9.86 0 01-1.51-5.27c0-5.46 4.44-9.9 9.9-9.9a9.82 9.82 0 017 2.9 9.84 9.84 0 012.9 7c0 5.46-4.44 9.9-9.9 9.9zm5.43-7.41c-.3-.15-1.77-.87-2.04-.97-.27-.1-.47-.15-.67.15-.2.3-.77.97-.94 1.17-.18.2-.35.22-.65.07-.3-.15-1.26-.46-2.4-1.47-.88-.79-1.48-1.76-1.65-2.06-.18-.3-.02-.46.13-.61.13-.13.3-.35.45-.52.15-.17.2-.3.3-.5.1-.2.05-.37-.02-.52-.08-.15-.67-1.61-.92-2.21-.24-.58-.49-.5-.67-.51h-.57c-.2 0-.52.07-.79.37s-1.04 1.02-1.04 2.48 1.06 2.88 1.21 3.08c.15.2 2.09 3.2 5.08 4.49.71.31 1.26.49 1.69.63.71.23 1.36.19 1.87.12.57-.09 1.76-.72 2.01-1.42.25-.69.25-1.29.17-1.41-.07-.12-.27-.2-.57-.35z" />
+      </svg>
+    ),
+  },
+];
 
 export default function Footer() {
   return (
-    <footer className="bg-[#1E060D] text-[#FAF6F0] border-t border-[#C5A059]/30 pt-16 pb-12 mt-20">
-      <div className="max-w-7xl mx-auto px-6 grid grid-cols-1 md:grid-cols-3 gap-12 text-sm">
-        
-        {/**/}
-        <div>
-          <Link to="/" className="inline-block mb-4 group" title="Airawati - Every handwoven saree, one home">
-            <img 
-              src="/images/airawati_logo_gold.png" 
-              alt="Airawati" 
-              className="h-12 sm:h-14 w-auto object-contain transition-transform group-hover:scale-105" 
-            />
-          </Link>
-          <p className="text-stone-300 leading-relaxed text-xs">
-            Celebrating India's handloom heritage through authentic, masterfully woven creations. Each piece tells a story of tradition, craftsmanship, and timeless beauty.
-          </p>
-          <div className="flex items-center space-x-3.5 mt-6">
-            {/* Facebook */}
-            <a
-              href="https://www.facebook.com/p/Airawati-fashions-61579817516749/"
-              target="_blank"
-              rel="noreferrer"
-              className="w-9 h-9 rounded-full border border-[#C5A059]/40 flex items-center justify-center text-[#C5A059] hover:bg-[#1877F2] hover:border-[#1877F2] hover:text-white transition-all shadow-xs"
-              title="Airawati on Facebook"
+    <footer className="mt-16 sm:mt-20 bg-[#1E060D] text-[#FAF6F0] border-t border-[#C5A059]/30">
+      <div className="mx-auto w-full max-w-7xl px-5 py-12 sm:px-8 sm:py-14 lg:px-10 lg:py-16">
+
+        {/* Main footer */}
+        <div className="grid grid-cols-1 gap-10 sm:grid-cols-2 lg:grid-cols-12 lg:gap-12">
+
+          {/* Brand */}
+          <div className="min-w-0 sm:col-span-2 lg:col-span-5">
+            <Link
+              to="/"
+              title="Airawati - Every handwoven saree, one home"
+              className="inline-flex max-w-full items-center mb-5 rounded-sm focus-visible:outline focus-visible:outline-2 focus-visible:outline-[#C5A059]"
             >
-              <svg className="w-4 h-4 fill-current" viewBox="0 0 24 24">
-                <path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z" />
-              </svg>
-            </a>
+              <img
+                src="/images/airawati_logo_gold.png"
+                alt="Airawati"
+                className="block h-auto w-40 max-w-full object-contain sm:w-44 md:w-48 lg:w-52"
+                loading="lazy"
+              />
+            </Link>
 
-            {/* Instagram */}
-            <a
-              href="https://www.instagram.com/airawatifashions"
-              target="_blank"
-              rel="noreferrer"
-              className="w-9 h-9 rounded-full border border-[#C5A059]/40 flex items-center justify-center text-[#C5A059] hover:bg-gradient-to-tr hover:from-[#f09433] hover:via-[#dc2743] hover:to-[#bc1888] hover:border-transparent hover:text-white transition-all shadow-xs"
-              title="Airawati on Instagram (@airawatifashions)"
-            >
-              <svg className="w-4 h-4 fill-current" viewBox="0 0 24 24">
-                <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z" />
-              </svg>
-            </a>
-
-            {/* WhatsApp (Replacing LinkedIn) */}
-            <a
-              href="https://api.whatsapp.com/send?phone=%2B918982065895"
-              target="_blank"
-              rel="noreferrer"
-              className="w-9 h-9 rounded-full border border-[#C5A059]/40 flex items-center justify-center text-[#C5A059] hover:bg-[#25D366] hover:border-[#25D366] hover:text-white transition-all shadow-xs"
-              title="Chat with Airawati on WhatsApp (+91 8982065895)"
-            >
-              <svg className="w-4 h-4 fill-current" viewBox="0 0 24 24">
-                <path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981zm11.387-5.464c-.074-.124-.272-.198-.57-.347-.297-.149-1.758-.868-2.031-.967-.272-.099-.47-.149-.669.149-.198.297-.768.967-.941 1.165-.173.198-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.095 3.2 5.076 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414z" />
-              </svg>
-            </a>
-          </div>
-        </div>
-
-        {/**/}
-        <div>
-          <h4 className="font-serif text-lg font-bold text-[#C5A059] mb-4">About Airawati</h4>
-          <ul className="space-y-2 text-xs text-stone-300">
-            <li><Link to="/journey" className="hover:text-[#C5A059] transition-colors">Our Story</Link></li>
-            <li><Link to="/shop" className="hover:text-[#C5A059] transition-colors">Shop Sarees</Link></li>
-            <li><Link to="/boutique" className="hover:text-[#C5A059] transition-colors">Boutique Blouses</Link></li>
-            <li><Link to="/accessories" className="hover:text-[#C5A059] transition-colors">Temple Accessories</Link></li>
-            <li><Link to="/artisans" className="hover:text-[#C5A059] transition-colors">Artisans</Link></li>
-            <li><Link to="/contact" className="hover:text-[#C5A059] transition-colors">Contact Us</Link></li>
-          </ul>
-        </div>
-
-        {/**/}
-        <div>
-          <h4 className="font-serif text-lg font-bold text-[#C5A059] mb-4">Contact & Atelier</h4>
-          <div className="text-stone-300 text-xs leading-relaxed space-y-2">
-            <p>
-              Maheshwar Loom Center, Madhya Pradesh<br />
-              Flagship Lounge: Malabar Hill, Mumbai
+            <p className="max-w-md text-sm leading-7 text-stone-300">
+              Celebrating India's handloom heritage through authentic,
+              masterfully woven creations. Each piece tells a story of
+              tradition, craftsmanship, and timeless beauty.
             </p>
-            <div className="pt-1 space-y-1">
-              <p>
-                <span className="text-stone-400">Phone:</span>{' '}
-                <a href="tel:+918982065895" className="text-[#FAF6F0] hover:text-[#C5A059] font-medium transition-colors">
-                  +91 8982065895
-                </a>
-              </p>
-              <p>
-                <span className="text-stone-400">WhatsApp:</span>{' '}
+
+            <div className="mt-6 flex flex-wrap items-center gap-3">
+              {socialLinks.map((social) => (
                 <a
-                  href="https://api.whatsapp.com/send?phone=%2B918982065895"
+                  key={social.label}
+                  href={social.href}
                   target="_blank"
-                  rel="noreferrer"
-                  className="text-[#25D366] hover:underline font-medium transition-colors"
+                  rel="noopener noreferrer"
+                  aria-label={`Visit Airawati on ${social.label}`}
+                  title={social.label}
+                  className="flex h-10 w-10 shrink-0 items-center justify-center rounded-full border border-[#C5A059]/40 text-[#C5A059] transition-all duration-300 hover:-translate-y-0.5 hover:bg-[#C5A059] hover:text-[#1E060D] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#C5A059]"
                 >
-                  +91 8982065895
+                  {social.icon}
                 </a>
-              </p>
+              ))}
+            </div>
+          </div>
+
+          {/* Quick links */}
+          <div className="min-w-0 lg:col-span-3">
+            <h2 className="mb-5 font-serif text-lg font-semibold tracking-wide text-[#C5A059]">
+              Explore Airawati
+            </h2>
+
+            <ul className="grid grid-cols-2 gap-x-4 gap-y-3 text-sm sm:grid-cols-1">
+              {footerLinks.map((item) => (
+                <li key={item.to} className="min-w-0">
+                  <Link
+                    to={item.to}
+                    className="inline-block break-words text-stone-300 transition-colors duration-200 hover:text-[#C5A059] focus-visible:outline focus-visible:outline-2 focus-visible:outline-[#C5A059]"
+                  >
+                    {item.label}
+                  </Link>
+                </li>
+              ))}
+            </ul>
+          </div>
+
+          {/* Contact */}
+          <div className="min-w-0 lg:col-span-4">
+            <h2 className="mb-5 font-serif text-lg font-semibold tracking-wide text-[#C5A059]">
+              Contact & Atelier
+            </h2>
+
+            <div className="space-y-4 text-sm leading-6 text-stone-300">
               <p>
-                <span className="text-stone-400">Email:</span>{' '}
-                <a href="mailto:airawatifashions@gmail.com" className="text-[#FAF6F0] hover:text-[#C5A059] font-medium transition-colors">
-                  airawatifashions@gmail.com
-                </a>
+                <span className="block font-medium text-[#FAF6F0]">
+                  Maheshwar Loom Center
+                </span>
+                Madhya Pradesh, India
               </p>
+
+              <p>
+                <span className="block font-medium text-[#FAF6F0]">
+                  Flagship Lounge
+                </span>
+                Malabar Hill, Mumbai
+              </p>
+
+              <div className="space-y-3 border-t border-white/10 pt-4">
+                <div className="flex flex-wrap items-start gap-x-2">
+                  <span className="shrink-0 text-stone-400">Phone:</span>
+                  <a
+                    href="tel:+918982065895"
+                    className="min-w-0 break-all transition-colors hover:text-[#C5A059]"
+                  >
+                    +91 8982065895
+                  </a>
+                </div>
+
+                {/* <div className="flex flex-wrap items-start gap-x-2">
+                  <span className="shrink-0 text-stone-400">WhatsApp:</span>
+                  <a
+                    href="https://api.whatsapp.com/send?phone=918982065895"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="min-w-0 break-all text-[#C5A059] transition-colors hover:underline"
+                  >
+                    +91 8982065895
+                  </a>
+                </div> */}
+
+                <div className="flex flex-wrap items-start gap-x-2">
+                  <span className="shrink-0 text-stone-400">Email:</span>
+                  <a
+                    href="mailto:airawatifashions@gmail.com"
+                    className="min-w-0 break-all transition-colors hover:text-[#C5A059]"
+                  >
+                    airawatifashions@gmail.com
+                  </a>
+                </div>
+              </div>
             </div>
           </div>
         </div>
-      </div>
 
-      {/**/}
-      <div className="max-w-7xl mx-auto px-6 mt-12 pt-6 border-t border-stone-800 flex flex-col md:flex-row justify-between items-center text-[11px] text-stone-400">
-        <p>&copy; Airawati Fashion. All rights reserved.</p>
-        <div className="flex space-x-6 mt-4 md:mt-0 items-center">
-          <a href="#" className="hover:text-[#C5A059] transition-colors">Privacy Policy</a>
-          <a href="#" className="hover:text-[#C5A059] transition-colors">Terms &amp; Conditions</a>
-          <Link to="/admin" className="hover:text-[#C5A059] text-stone-400 font-medium transition-colors">Admin Console</Link>
+        {/* Copyright and legal links */}
+        <div className="mt-10 border-t border-[#C5A059]/20 pt-6 sm:mt-12">
+          <div className="flex flex-col gap-5 text-center sm:flex-row sm:items-center sm:justify-between sm:text-left">
+            <p className="text-xs leading-5 text-stone-400">
+              © {new Date().getFullYear()} Airawati Fashion. All rights reserved.
+            </p>
+
+            <nav
+              aria-label="Footer legal navigation"
+              className="flex flex-wrap items-center justify-center gap-x-5 gap-y-3 text-xs sm:justify-end"
+            >
+              <Link
+                to="/privacy-policy"
+                className="text-stone-400 transition-colors hover:text-[#C5A059]"
+              >
+                Privacy Policy
+              </Link>
+
+              <Link
+                to="/terms"
+                className="text-stone-400 transition-colors hover:text-[#C5A059]"
+              >
+                Terms &amp; Conditions
+              </Link>
+
+              <Link
+                to="/admin"
+                className="font-medium text-stone-400 transition-colors hover:text-[#C5A059]"
+              >
+                Admin Console
+              </Link>
+            </nav>
+          </div>
         </div>
       </div>
     </footer>

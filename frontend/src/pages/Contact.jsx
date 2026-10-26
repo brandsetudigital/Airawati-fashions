@@ -28,7 +28,7 @@ export default function Contact() {
   return (
     <div className="bg-[#FAF6F0] min-h-screen text-[#1E060D] pb-16">
       {/* 1. HERO BANNER - Exact Design Matching User Reference Image */}
-      <section className="relative w-full bg-[#FAF5F0] border-b border-[#C5A059]/20 py-4 sm:py-6 lg:py-8">
+      {/* <section className="relative w-full bg-[#FAF5F0] border-b border-[#C5A059]/20 py-4 sm:py-6 lg:py-8">
         <div className="max-w-6xl lg:max-w-7xl mx-auto px-3 sm:px-6">
           <div 
             className="relative rounded-2xl sm:rounded-3xl overflow-hidden shadow-xl border border-[#C5A059]/30 min-h-[360px] sm:min-h-[440px] md:min-h-[500px] lg:min-h-[540px] flex items-center justify-center bg-cover bg-center"
@@ -36,23 +36,23 @@ export default function Contact() {
               backgroundImage: "url('/images/contact_hero_bg_clean.png')",
               backgroundColor: '#F8EFCE'
             }}
-          >
+          > */}
             {/* Center Content Matching User Reference Typography */}
-            <div className="relative z-10 flex flex-col items-center justify-center text-center px-4 max-w-xl mx-auto py-8">
+            {/* <div className="relative z-10 flex flex-col items-center justify-center text-center px-4 max-w-xl mx-auto py-8">
               {/* Heading: Contact Us with authentic luxury gradient */}
-              <h1 className="font-serif text-4xl sm:text-6xl md:text-7xl font-bold tracking-tight text-center leading-tight">
+              {/* <h1 className="font-serif text-4xl sm:text-6xl md:text-7xl font-bold tracking-tight text-center leading-tight">
                 <span className="bg-gradient-to-r from-[#7A212F] via-[#9B2A32] to-[#C23729] bg-clip-text text-transparent">
                   Contact Us
                 </span>
-              </h1>
+              </h1> */} 
 
               {/* Subtitle */}
-              <p className="text-[#8C6863] text-xs sm:text-sm md:text-base font-light tracking-wide mt-3 sm:mt-4 max-w-md mx-auto text-center leading-relaxed">
+              {/* <p className="text-[#8C6863] text-xs sm:text-sm md:text-base font-light tracking-wide mt-3 sm:mt-4 max-w-md mx-auto text-center leading-relaxed">
                 We're here to help you discover the perfect handwoven saree
-              </p>
+              </p> */}
 
               {/* Action Button: Meet Our Artisans -> */}
-              <div className="mt-5 sm:mt-7">
+              {/* <div className="mt-5 sm:mt-7">
                 <Link
                   to="/artisans"
                   className="inline-flex items-center gap-2 px-6 py-2.5 sm:px-8 sm:py-3 bg-[#8B2F2F] hover:bg-[#722323] text-white rounded-full text-xs sm:text-sm font-medium tracking-wide shadow-md hover:shadow-lg transition-all cursor-pointer group"
@@ -64,7 +64,45 @@ export default function Contact() {
             </div>
           </div>
         </div>
-      </section>
+      </section> */}
+
+
+
+
+      
+
+{/* Responsive Contact Hero Image */}
+<section className="w-full bg-[#FAF5F0] py-3 sm:py-5 lg:py-8">
+  <div className="max-w-6xl lg:max-w-7xl mx-auto px-3 sm:px-5 lg:px-6">
+    <div className="relative overflow-hidden rounded-xl sm:rounded-2xl lg:rounded-3xl border border-[#C5A059]/30 shadow-xl">
+
+      {/* Laptop / Desktop Image */}
+      <img
+        src="/contactus.png"
+        alt="Airawati — Authentic Indian Handwoven Sarees"
+        className="hidden lg:block w-full h-auto object-cover"
+        fetchPriority="high"
+      />
+
+      {/* Tablet Image */}
+      <img
+        src="/contactus.png"
+        alt="Airawati handwoven sarees — tablet banner"
+        className="hidden sm:block lg:hidden w-full h-auto object-cover"
+      />
+
+      {/* Mobile Image */}
+      <img
+        src="/contactus-2.png"
+        alt="Airawati handwoven sarees — mobile banner"
+        className="block sm:hidden w-full h-auto object-cover"
+      />
+
+    </div>
+  </div>
+</section>
+
+
 
       {/* 2. CONTACT CHANNELS CARDS */}
       <section className="max-w-7xl mx-auto px-4 sm:px-6 pt-6 sm:pt-8">
